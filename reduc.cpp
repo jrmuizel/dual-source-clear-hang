@@ -3216,12 +3216,7 @@ ID3D11ShaderResourceView * const ptmp1138 = p0x28052d26d00;
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1139;
 /*1773*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1139);
 const D3D11_BUFFER_DESC tmp1140 = {/*ByteWidth = */ 80, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 4, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0, /*StructureByteStride = */ 0};
-ID3D11Buffer * p0x28052d7ae78;
-/*1774*/ /*ID3D11Device5*/device->CreateBuffer(/*pDesc = */ &tmp1140, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppBuffer: ID3D11Buffer * * = */ &p0x28052d7ae78);// = 0
-static const unsigned char btmp1141[] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x3b, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0xbf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0x3b, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0xbf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 0x0, 0x80, 0xb4, 0x1, 0x0, 0x0, 0x34, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0x3f};
-/*1775*/ /*ID3D11DeviceContext4*/ctx->UpdateSubresource(/*pDstResource: ID3D11Resource * = */ p0x28052d7ae78, /*DstSubresource: UINT = */ 0, /*pDstBox: const D3D11_BOX * = */ 0, /*pSrcData = */ btmp1141, /*SrcRowPitch: UINT = */ 0, /*SrcDepthPitch: UINT = */ 0);
-ID3D11Buffer * const ptmp1142 = p0x28052d7ae78;
-/*1776*/ /*ID3D11DeviceContext4*/ctx->VSSetConstantBuffers(/*StartSlot: UINT = */ 0, /*NumBuffers: UINT = */ 1, /*ppConstantBuffers = */ &ptmp1142);
+
 D3D11_MAPPED_SUBRESOURCE ltmp1143;
 /*1777*/ /*ID3D11DeviceContext4*/ctx->Map(/*pResource: ID3D11Resource * = */ p0x28052d6bef8, /*Subresource: UINT = */ 0, /*MapType = */ D3D11_MAP(4), /*MapFlags: UINT = */ 0, /*pMappedResource: D3D11_MAPPED_SUBRESOURCE * = */ &ltmp1143);// = 0
 p0x280509ce000 = ltmp1143.pData; // size: 576
@@ -3409,6 +3404,11 @@ ID3D11ShaderResourceView* p0x2805015f2c0_2x;
 /*1582*/ /*ID3D11Device5*/device->CreateShaderResourceView(/*pResource: ID3D11Resource * = */ p0x28052d7a8b8, /*pDesc = */ &tmp1053x, /*ppSRView: ID3D11ShaderResourceView * * = */ &p0x2805015f2c0_2x);// = 0
 ID3D11ShaderResourceView * const ptmp3335 = p0x2805015f2c0_2x;
 /*6275*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp3335);
+ID3D11Buffer* p0x28052d7ae78;
+/*1774*/ /*ID3D11Device5*/device->CreateBuffer(/*pDesc = */ &tmp1140, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppBuffer: ID3D11Buffer * * = */ &p0x28052d7ae78);// = 0
+static const unsigned char btmp1141[] = { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x3b, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0xbf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0x3b, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0xbf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 0x0, 0x80, 0xb4, 0x1, 0x0, 0x0, 0x34, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0x3f };
+/*1775*/ /*ID3D11DeviceContext4*/ctx->UpdateSubresource(/*pDstResource: ID3D11Resource * = */ p0x28052d7ae78, /*DstSubresource: UINT = */ 0, /*pDstBox: const D3D11_BOX * = */ 0, /*pSrcData = */ btmp1141, /*SrcRowPitch: UINT = */ 0, /*SrcDepthPitch: UINT = */ 0);
+
 ID3D11Buffer * const ptmp3337 = p0x28052d7ae78;
 /*6279*/ /*ID3D11DeviceContext4*/ctx->VSSetConstantBuffers(/*StartSlot: UINT = */ 0, /*NumBuffers: UINT = */ 1, /*ppConstantBuffers = */ &ptmp3337);
 static ID3D11Buffer * const atmp3338[] = {p0x28052d6a2f8, p0x28052d187b8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
