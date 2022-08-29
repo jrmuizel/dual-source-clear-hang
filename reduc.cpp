@@ -6835,11 +6835,7 @@ void * ltmp3017;
 D3D11_TEXTURE2D_DESC ltmp3018;
 /*5626*/ /*ID3D11Texture2D1*/p0x28052d95978->GetDesc(/*pDesc: D3D11_TEXTURE2D_DESC * = */ &ltmp3018);
 /*5627*/ /*ID3D11Texture2D1*/p0x28052d95978->Release();// = 1
-const D3D11_BOX tmp3019 = {/*left = */ 8, /*top = */ 8, /*front = */ 0, /*right = */ 1024, /*bottom = */ 26, /*back = */ 1};
-/*5628*/ /*ID3D11DeviceContext4*/ctx->CopySubresourceRegion(/*pDstResource: ID3D11Resource * = */ p0x28052d95978, /*DstSubresource: UINT = */ 0, /*DstX: UINT = */ 0, /*DstY: UINT = */ 0, /*DstZ: UINT = */ 0, /*pSrcResource: ID3D11Resource * = */ p0x28052d95678_2, /*SrcSubresource: UINT = */ 0, /*pSrcBox = */ &tmp3019);
-const D3D11_BOX tmp3020 = {/*left = */ 0, /*top = */ 8, /*front = */ 0, /*right = */ 264, /*bottom = */ 26, /*back = */ 1};
-///*5629*/ /*ID3D11DeviceContext4*/ctx->CopySubresourceRegion(/*pDstResource: ID3D11Resource * = */ p0x28052d95978, /*DstSubresource: UINT = */ 0, /*DstX: UINT = */ 1016, /*DstY: UINT = */ 0, /*DstZ: UINT = */ 0, /*pSrcResource: ID3D11Resource * = */ p0x28052d934b8, /*SrcSubresource: UINT = */ 0, /*pSrcBox = */ &tmp3020);
-/*5630*/ /*ID3D11DeviceContext4*/ctx->Flush();
+
 static const FLOAT atmp3021[] = {0.0, 0.0, 0.0, 0.0};
 const D3D11_RECT tmp3022 = {/*left = */ 0, /*top = */ 0, /*right = */ 1280, /*bottom = */ 18};
 /*5631*/ /*ID3D11DeviceContext4*/ctx->ClearView(/*pView: ID3D11View * = */ p0x28052d6e2b8, /*Color = */ atmp3021, /*pRect = */ &tmp3022, /*NumRects: UINT = */ 1);
