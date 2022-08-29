@@ -9929,8 +9929,6 @@ ID3D11RenderTargetView * const ptmp2285 = p0x28052d6cff8;
 // p0x28052d6b3b8 ID3D11Texture2D IUnknown
 /*4126*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 // p0x28052d6cff8 ID3D11RenderTargetView ID3D11RenderTargetView
-D3D11_RENDER_TARGET_VIEW_DESC ltmp2286;
-/*4127*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetDesc(/*pDesc: D3D11_RENDER_TARGET_VIEW_DESC * = */ &ltmp2286);
 static const FLOAT atmp2287[] = {0.0, 0.0, 0.0, 0.0};
 /*4128*/ /*ID3D11DeviceContext4*/ctx->OMSetBlendState(/*pBlendState: ID3D11BlendState * = */ p0x28052d75220, /*BlendFactor = */ atmp2287, /*SampleMask = */ UINT(4294967295));
 /*4129*/ /*ID3D11DeviceContext4*/ctx->VSSetShader(/*pVertexShader: ID3D11VertexShader * = */ p0x28052d35c10, /*ppClassInstances: ID3D11ClassInstance * const * = */ 0, /*NumClassInstances: UINT = */ 0);
