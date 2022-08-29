@@ -13354,30 +13354,13 @@ D3D11_SHADER_RESOURCE_VIEW_DESC ltmp3324;
 // p0x28050149ab0 ID3D11DeviceContext ID3D11DeviceContext
 ID3D11ShaderResourceView * const ptmp3325 = p0x28052d27f80;
 /*6245*/ /*ID3D11DeviceContext4*/p0x28050149ab0_3->VSSetShaderResources(/*StartSlot: UINT = */ 2, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp3325);
-// p0x28052d27f80 ID3D11ShaderResourceView ID3D11View
-// redeclare: p0x28052d6bc38: ID3D11Resource * was ID3D11Texture2D *, alive
-/*6246*/ /*ID3D11ShaderResourceView1*/p0x28052d27f80->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6bc38_2);
-// p0x28052d6bc38 ID3D11Texture2D IUnknown
-/*6247*/ /*ID3D11Texture2D1*/p0x28052d6bc38->Release();// = 1
-// p0x28052d27f80 ID3D11ShaderResourceView ID3D11ShaderResourceView
-D3D11_SHADER_RESOURCE_VIEW_DESC ltmp3326;
-/*6248*/ /*ID3D11ShaderResourceView1*/p0x28052d27f80->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp3326);
-// p0x28052d80000 ID3D11ShaderResourceView ID3D11View
-// redeclare: p0x28052d79ab8: ID3D11Resource * was ID3D11Texture2D *, alive
-/*6249*/ /*ID3D11ShaderResourceView1*/p0x28052d80000->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d79ab8_2);
-// p0x28052d79ab8 ID3D11Texture2D IUnknown
-/*6250*/ /*ID3D11Texture2D1*/p0x28052d79ab8->Release();// = 1
+
+
 // p0x28050149ab0 ID3D11DeviceContext ID3D11DeviceContext
 ID3D11ShaderResourceView * const ptmp3327 = p0x28052d80000;
 /*6251*/ /*ID3D11DeviceContext4*/p0x28050149ab0_3->VSSetShaderResources(/*StartSlot: UINT = */ 3, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp3327);
-// p0x28052d80000 ID3D11ShaderResourceView ID3D11View
-// redeclare: p0x28052d79ab8: ID3D11Resource * was ID3D11Texture2D *, alive
-/*6252*/ /*ID3D11ShaderResourceView1*/p0x28052d80000->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d79ab8_2);
-// p0x28052d79ab8 ID3D11Texture2D IUnknown
-/*6253*/ /*ID3D11Texture2D1*/p0x28052d79ab8->Release();// = 1
-// p0x28052d80000 ID3D11ShaderResourceView ID3D11ShaderResourceView
-D3D11_SHADER_RESOURCE_VIEW_DESC ltmp3328;
-/*6254*/ /*ID3D11ShaderResourceView1*/p0x28052d80000->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp3328);
+
+
 // p0x28052d90040 ID3D11ShaderResourceView ID3D11View
 // redeclare: p0x28052d79538: ID3D11Resource * was ID3D11Texture2D *, alive
 /*6255*/ /*ID3D11ShaderResourceView1*/p0x28052d90040->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d79538_2);
