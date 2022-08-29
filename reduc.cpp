@@ -1884,30 +1884,6 @@ static const unsigned char btmp676[] = {0x44, 0x58, 0x42, 0x43, 0xad, 0xb6, 0xc3
 ID3D11InputLayout * p0x28050185e20;
 /*967*/ /*ID3D11Device5*/device->CreateInputLayout(/*pInputElementDescs = */ atmp675, /*NumElements: UINT = */ 4, /*pShaderBytecodeWithInputSignature = */ btmp676, /*BytecodeLength: SIZE_T = */ 1044, /*ppInputLayout: ID3D11InputLayout * * = */ &p0x28050185e20);// = 0
 /*968*/ /*ID3D11DeviceContext4*/ctx->IASetInputLayout(/*pInputLayout: ID3D11InputLayout * = */ p0x28050185e20);
-const D3D11_BUFFER_DESC tmp677 = {/*ByteWidth = */ 8, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 17, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0, /*StructureByteStride = */ 0};
-ID3D11Buffer * p0x28052d6a2f8;
-/*969*/ /*ID3D11Device5*/device->CreateBuffer(/*pDesc = */ &tmp677, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppBuffer: ID3D11Buffer * * = */ &p0x28052d6a2f8);// = 0
-GUID dtmp678 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
-/*971*/ /*ID3D11Buffer*/p0x28052d6a2f8->SetPrivateData(/*guid = */ dtmp678, /*DataSize: UINT = */ 29, /*pData: const void * = */ "ANGLE_Buffer11::NativeStorage");// = 0
-const D3D11_BOX tmp679 = {/*left = */ 0, /*top = */ 0, /*front = */ 0, /*right = */ 8, /*bottom = */ 1, /*back = */ 1};
-/*972*/ /*ID3D11DeviceContext4*/ctx->CopySubresourceRegion(/*pDstResource: ID3D11Resource * = */ p0x28052d6a2f8, /*DstSubresource: UINT = */ 0, /*DstX: UINT = */ 0, /*DstY: UINT = */ 0, /*DstZ: UINT = */ 0, /*pSrcResource: ID3D11Resource * = */ p0x28052d181f8, /*SrcSubresource: UINT = */ 0, /*pSrcBox = */ &tmp679);
-static ID3D11Buffer * const atmp680[] = {p0x28052d6a2f8, p0x28052d187b8, p0x28052d187b8, p0x28052d187b8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-static const UINT atmp681[] = {2, 16, 16, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-static const UINT atmp682[] = {0, 0, 352, 704, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-/*973*/ /*ID3D11DeviceContext4*/ctx->IASetVertexBuffers(/*StartSlot: UINT = */ 0, /*NumBuffers: UINT = */ 16, /*ppVertexBuffers = */ atmp680, /*pStrides = */ atmp681, /*pOffsets = */ atmp682);
-/*974*/ /*ID3D11DeviceContext4*/ctx->IASetPrimitiveTopology(/*Topology = */ D3D11_PRIMITIVE_TOPOLOGY(4));
-const D3D11_TEXTURE2D_DESC tmp683 = {/*Width = */ 1024, /*Height = */ 20, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(2), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 168, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0};
-ID3D11Texture2D * p0x28052d6bc38;
-/*976*/ /*ID3D11Device5*/device->CreateTexture2D(/*pDesc = */ &tmp683, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d6bc38);// = 0
-GUID dtmp684 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
-/*978*/ /*ID3D11Texture2D1*/p0x28052d6bc38->SetPrivateData(/*guid = */ dtmp684, /*DataSize: UINT = */ 26, /*pData: const void * = */ "ANGLE_TexStorage2D.Texture");// = 0
-const D3D11_SHADER_RESOURCE_VIEW_DESC tmp685 = {/*Format = */ DXGI_FORMAT(2), /*ViewDimension = */ D3D11_SRV_DIMENSION(4), /*None = */ {/*Texture2D = */ {/*MostDetailedMip = */ 0, /*MipLevels = */ 1}}};
-ID3D11ShaderResourceView * p0x28052d278c0;
-/*979*/ /*ID3D11Device5*/device->CreateShaderResourceView(/*pResource: ID3D11Resource * = */ p0x28052d6bc38, /*pDesc = */ &tmp685, /*ppSRView: ID3D11ShaderResourceView * * = */ &p0x28052d278c0);// = 0
-GUID dtmp686 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
-/*981*/ /*ID3D11ShaderResourceView1*/p0x28052d278c0->SetPrivateData(/*guid = */ dtmp686, /*DataSize: UINT = */ 22, /*pData: const void * = */ "ANGLE_TexStorage2D.SRV");// = 0
-const D3D11_RENDER_TARGET_VIEW_DESC tmp687 = {/*Format = */ DXGI_FORMAT(2), /*ViewDimension = */ D3D11_RTV_DIMENSION(4), /*None = */ {/*Texture2D = */ {/*MipSlice = */ 0}}};
-ID3D11RenderTargetView * p0x28052d6dff8;
 
 
 
@@ -1915,6 +1891,31 @@ ID3D11RenderTargetView * p0x28052d6dff8;
 
 
 // Initial draw
+
+const D3D11_BUFFER_DESC tmp677 = {/*ByteWidth = */ 8, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 17, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0, /*StructureByteStride = */ 0 };
+
+const D3D11_TEXTURE2D_DESC tmp683 = {/*Width = */ 1024, /*Height = */ 20, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(2), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 168, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0 };
+
+
+
+ID3D11Texture2D* p0x28052d6bc38;
+/*976*/ /*ID3D11Device5*/device->CreateTexture2D(/*pDesc = */ &tmp683, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d6bc38);// = 0
+GUID dtmp684 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0} };
+/*978*/ /*ID3D11Texture2D1*/p0x28052d6bc38->SetPrivateData(/*guid = */ dtmp684, /*DataSize: UINT = */ 26, /*pData: const void * = */ "ANGLE_TexStorage2D.Texture");// = 0
+const D3D11_SHADER_RESOURCE_VIEW_DESC tmp685 = {/*Format = */ DXGI_FORMAT(2), /*ViewDimension = */ D3D11_SRV_DIMENSION(4), /*None = */ {/*Texture2D = */ {/*MostDetailedMip = */ 0, /*MipLevels = */ 1}} };
+ID3D11ShaderResourceView* p0x28052d278c0;
+/*979*/ /*ID3D11Device5*/device->CreateShaderResourceView(/*pResource: ID3D11Resource * = */ p0x28052d6bc38, /*pDesc = */ &tmp685, /*ppSRView: ID3D11ShaderResourceView * * = */ &p0x28052d278c0);// = 0
+GUID dtmp686 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0} };
+/*981*/ /*ID3D11ShaderResourceView1*/p0x28052d278c0->SetPrivateData(/*guid = */ dtmp686, /*DataSize: UINT = */ 22, /*pData: const void * = */ "ANGLE_TexStorage2D.SRV");// = 0
+const D3D11_RENDER_TARGET_VIEW_DESC tmp687 = {/*Format = */ DXGI_FORMAT(2), /*ViewDimension = */ D3D11_RTV_DIMENSION(4), /*None = */ {/*Texture2D = */ {/*MipSlice = */ 0}} };
+ID3D11RenderTargetView* p0x28052d6dff8;
+
+ID3D11Buffer* p0x28052d6a2f8;
+/*969*/ /*ID3D11Device5*/device->CreateBuffer(/*pDesc = */ &tmp677, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppBuffer: ID3D11Buffer * * = */ &p0x28052d6a2f8);// = 0
+GUID dtmp678 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0} };
+/*971*/ /*ID3D11Buffer*/p0x28052d6a2f8->SetPrivateData(/*guid = */ dtmp678, /*DataSize: UINT = */ 29, /*pData: const void * = */ "ANGLE_Buffer11::NativeStorage");// = 0
+const D3D11_BOX tmp679 = {/*left = */ 0, /*top = */ 0, /*front = */ 0, /*right = */ 8, /*bottom = */ 1, /*back = */ 1 };
+/*972*/ /*ID3D11DeviceContext4*/ctx->CopySubresourceRegion(/*pDstResource: ID3D11Resource * = */ p0x28052d6a2f8, /*DstSubresource: UINT = */ 0, /*DstX: UINT = */ 0, /*DstY: UINT = */ 0, /*DstZ: UINT = */ 0, /*pSrcResource: ID3D11Resource * = */ p0x28052d181f8, /*SrcSubresource: UINT = */ 0, /*pSrcBox = */ &tmp679);
 
 
 const D3D11_TEXTURE2D_DESC tmp2221 = {/*Width = */ 1024, /*Height = */ 2, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(4), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 136, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0 };
