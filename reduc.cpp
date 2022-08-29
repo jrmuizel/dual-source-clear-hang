@@ -86,11 +86,9 @@ p0x2805015d6f8 = 0;
 DXGI_ADAPTER_DESC ltmp8;
 /*41*/ /*IDXGIAdapter4*/p0x28050141ff0->GetDesc(/*pDesc: DXGI_ADAPTER_DESC * = */ &ltmp8);// = 0
 /*42*/ /*ID3D11Device5*/p0x28050147be8->GetFeatureLevel();// = 45056
-// redeclare: p0x28050149ab0: ID3D11DeviceContext * was ID3D11DeviceContext *, dead
 ID3D11DeviceContext * p0x28050149ab0_2;
 /*43*/ /*ID3D11Device5*/p0x28050147be8->GetImmediateContext(/*ppImmediateContext: ID3D11DeviceContext * * = */ &p0x28050149ab0_2);
 const D3D11_TEXTURE2D_DESC tmp9 = {/*Width = */ 32, /*Height = */ 32, /*MipLevels = */ 0, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(87), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 40, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 256};
-// redeclare: p0x2805015e5f8: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x2805015e5f8_2;
 /*44*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp9, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x2805015e5f8_2);// = 0
 IDXGIKeyedMutex* p0x2805015e558;
@@ -236,7 +234,6 @@ IDXGIDevice* p0x28050162248;
 // QI redeclare: as ID3D11Device3. Was ID3D11Device *
 ID3D11Device3* p0x28050162a38_2;
 /*120*/ /*IDXGIDevice4*/p0x28050162248->QueryInterface(/* ID3D11Device3 */ &p0x28050162a38_2);// = 0
-// redeclare: p0x2805016cb00: ID3D11DeviceContext3 * was ID3D11DeviceContext *, dead
 ID3D11DeviceContext3 * p0x2805016cb00_2;
 /*121*/ /*ID3D11Device5*/p0x28050162a38_2->GetImmediateContext3(/*ppImmediateContext: ID3D11DeviceContext3 * * = */ &p0x2805016cb00_2);
 /*122*/ /*IDXGIDevice4*/p0x28050162248->GetAdapter(/*pAdapter: IDXGIAdapter * * = */ &p0x28050141ff0_3);// = 0
@@ -549,7 +546,6 @@ GUID dtmp128 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212,
 /*254*/ /*IDXGIAdapter4*/p0x28050141ff0->Release();// = 5
 /*255*/ /*ID3D11DeviceContext4*/p0x2805016cb00_2->Release();// = 3
 /*256*/ /*ID3D11Device5*/p0x28050162a38->Release();// = 91
-// redeclare: p0x2805016cb00: ID3D11DeviceContext * was ID3D11DeviceContext *, dead
 ID3D11DeviceContext * p0x2805016cb00_3;
 /*257*/ /*ID3D11Device5*/p0x28050162a38->GetImmediateContext(/*ppImmediateContext: ID3D11DeviceContext * * = */ &p0x2805016cb00_3);
 /*258*/ /*IDXGIDevice4*/p0x28050162248->Release();// = 90
@@ -577,8 +573,6 @@ ID3DDeviceContextState * p0x28050161dc0;
 /*268*/ /*ID3D11Device5*/p0x28050147be8_2->CreateDeviceContextState(/*Flags: UINT = */ 0, /*pFeatureLevels = */ atmp134, /*FeatureLevels: UINT = */ 7, /*SDKVersion: UINT = */ 7, __uuidof(ID3D11Device1), /*pChosenFeatureLevel: D3D_FEATURE_LEVEL * = */ &ltmp135, /*ppContextState: ID3DDeviceContextState * * = */ &p0x28050161dc0);// = 0
 /*270*/ /*ID3D10Multithread*/p0x28050147c20->Enter();
 /*271*/ /*ID3D10Multithread*/p0x28050147c20->Leave();
-// redeclare: p0x28050149ab0: ID3D11DeviceContext1 * was ID3D11DeviceContext *, dead
-// redeclare: p0x28050149ab0_2: ID3D11DeviceContext1 * was ID3D11DeviceContext *, dead
 ID3D11DeviceContext1 * ctx;
 /*272*/ /*ID3D11Device5*/p0x28050147be8_2->GetImmediateContext1(/*ppImmediateContext: ID3D11DeviceContext1 * * = */ &ctx);
 /*273*/ /*IDXGIDevice4*/p0x280501473f8->Release();// = 7
@@ -590,8 +584,6 @@ void * p0x28050147be8_3;
 /*277*/ /*ID3D11Device5*/p0x28050147be8->GetDeviceRemovedReason();// = 0
 /*278*/ /*ID3D11Device5*/p0x28050147be8->GetFeatureLevel();// = 45056
 /*279*/ /*ID3D11Device5*/p0x28050147be8->AddRef();// = 9
-// redeclare: p0x28050149ab0: ID3D11DeviceContext * was ID3D11DeviceContext *, dead
-// redeclare: p0x28050149ab0_2: ID3D11DeviceContext * was ID3D11DeviceContext *, dead
 ID3D11DeviceContext * p0x28050149ab0_4;
 /*280*/ /*ID3D11Device5*/p0x28050147be8->GetImmediateContext(/*ppImmediateContext: ID3D11DeviceContext * * = */ &p0x28050149ab0_4);
 /*281*/ /*ID3D11Device5*/p0x28050147be8->GetFeatureLevel();// = 45056
@@ -603,8 +595,6 @@ ID3DUserDefinedAnnotation* p0x28050149a98;
 // QI redeclare: as ID3D11DeviceContext1. Was ID3D11DeviceContext *
 /*285*/ /*ID3D11DeviceContext4*/ctx->QueryInterface(/* ID3D11DeviceContext1 */ &ctx);// = 0
 IID dtmp138 = {/*Data1 = */ 3034824733, /*Data2 = */ 59294, /*Data3 = */ 17975, /*Data4 = */ {145, 178, 81, 14, 159, 76, 155, 143}} /* b4e3c01d-e79e-4637-91b2-510e9f4c9b8f*/;
-// redeclare: p0x28050149ab0: void * was ID3D11DeviceContext *, dead
-// redeclare: p0x28050149ab0_2: void * was ID3D11DeviceContext *, dead
 void * p0x28050149ab0_5;
 /*286*/ /*ID3D11DeviceContext4*/ctx->QueryInterface(/*riid = */ dtmp138, /*ppvObj: void * * = */ &p0x28050149ab0_5);// = 0
 /*287*/ /*ID3D11Device5*/p0x28050147be8->QueryInterface(/* IDXGIDevice */ &p0x280501473f8);// = 0
@@ -1471,7 +1461,6 @@ HANDLE p0x40003102;
 IDXGIKeyedMutex* p0x28052d17638;
 /*726*/ /*ID3D11Texture2D1*/p0x28052d176b8->QueryInterface(/* IDXGIKeyedMutex */ &p0x28052d17638);// = 0
 const D3D11_RENDER_TARGET_VIEW_DESC tmp548 = {/*Format = */ DXGI_FORMAT(87), /*ViewDimension = */ D3D11_RTV_DIMENSION(4), /*None = */ {/*Texture2D = */ {/*MipSlice = */ 0}}};
-// redeclare: p0x28052d2baf8: ID3D11RenderTargetView * was ID3D11RenderTargetView *, dead
 ID3D11RenderTargetView * p0x28052d2baf8_2;
 /*727*/ /*ID3D11Device5*/p0x28050147be8->CreateRenderTargetView(/*pResource: ID3D11Resource * = */ p0x28052d176b8, /*pDesc = */ &tmp548, /*ppRTView: ID3D11RenderTargetView * * = */ &p0x28052d2baf8_2);// = 0
 GUID dtmp549 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -1573,8 +1562,6 @@ static const unsigned char btmp581[] = {0x44, 0x58, 0x42, 0x43, 0xe0, 0xf6, 0xbc
 ID3D11PixelShader * p0x28052d44e90;
 /*765*/ /*ID3D11Device5*/p0x28050147be8->CreatePixelShader(/*pShaderBytecode = */ btmp581, /*BytecodeLength: SIZE_T = */ 1768, /*pClassLinkage: ID3D11ClassLinkage * = */ 0, /*ppPixelShader: ID3D11PixelShader * * = */ &p0x28052d44e90);// = 0
 /*766*/ /*ID3D11Device5*/p0x28050147be8->AddRef();// = 41
-// redeclare: p0x28050149ab0: ID3D11DeviceContext * was ID3D11DeviceContext *, dead
-// redeclare: p0x28050149ab0_2: ID3D11DeviceContext * was ID3D11DeviceContext *, dead
 /*767*/ /*ID3D11Device5*/p0x28050147be8->GetImmediateContext(/*ppImmediateContext: ID3D11DeviceContext * * = */ &p0x28050149ab0_4);
 /*768*/ /*ID3D11Device5*/p0x28050147be8->AddRef();// = 42
 /*769*/ /*ID3D11DeviceContext4*/ctx->AddRef();// = 7
@@ -1691,7 +1678,6 @@ static const unsigned char btmp608[] = {0x0, 0x0, 0xff, 0x0, 0x0, 0xff, 0xff, 0x
 /*838*/ memcpy(/*dest: void * = */ p0x280509cd000, /*src = */ btmp608, /*n: size_t = */ 8);
 /*839*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d181f8, /*Subresource: UINT = */ 0);
 const D3D11_TEXTURE2D_DESC tmp609 = {/*Width = */ 1, /*Height = */ 1, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(28), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 136, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0};
-// redeclare: p0x28052d16b78: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x28052d16b78_2;
 /*840*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp609, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d16b78_2);// = 0
 GUID dtmp610 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -2023,7 +2009,6 @@ D3D11_TEXTURE2D_DESC ltmp724;
 // kill declaration  p0x28052d6ab78
 p0x28052d6ab78 = 0;
 const D3D11_TEXTURE2D_DESC tmp725 = {/*Width = */ 1024, /*Height = */ 2, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(2), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(3), /*BindFlags = */ 0, /*CPUAccessFlags = */ 196608, /*MiscFlags = */ 0};
-// redeclare: p0x28052d6ab78: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x28052d6ab78_2;
 /*1040*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp725, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d6ab78_2);// = 0
 GUID dtmp726 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -2067,7 +2052,6 @@ D3D11_TEXTURE2D_DESC ltmp740;
 // kill declaration  p0x28052d6ae38
 p0x28052d6ae38 = 0;
 const D3D11_TEXTURE2D_DESC tmp741 = {/*Width = */ 2048, /*Height = */ 2048, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(61), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 40, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0};
-// redeclare: p0x28052d6b3b8: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x28052d6b3b8_2;
 /*1064*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp741, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d6b3b8_2);// = 0
 GUID dtmp742 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -2100,7 +2084,6 @@ static const unsigned char btmp752[] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 
 /*1080*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d187b8, /*Subresource: UINT = */ 0);
 ID3D11RenderTargetView * const ptmp753 = p0x28052d6cff8;
 /*1081*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp753, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 ID3D11Resource * p0x28052d6b3b8_3;
 /*1082*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1083*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
@@ -2232,12 +2215,10 @@ ID3D11ShaderResourceView * p0x28052d26d00;
 /*1154*/ /*ID3D11Device5*/p0x28050147be8->CreateShaderResourceView(/*pResource: ID3D11Resource * = */ p0x28052d6b3b8_2, /*pDesc = */ &tmp800, /*ppSRView: ID3D11ShaderResourceView * * = */ &p0x28052d26d00);// = 0
 GUID dtmp801 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
 /*1156*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->SetPrivateData(/*guid = */ dtmp801, /*DataSize: UINT = */ 22, /*pData: const void * = */ "ANGLE_TexStorage2D.SRV");// = 0
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1157*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1158*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp802 = p0x28052d26d00;
 /*1159*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp802);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1160*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1161*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp803;
@@ -2245,7 +2226,6 @@ D3D11_SHADER_RESOURCE_VIEW_DESC ltmp803;
 ID3D11SamplerState * const ptmp804 = p0x28052d03b20;
 /*1163*/ /*ID3D11DeviceContext4*/ctx->VSSetSamplers(/*StartSlot: UINT = */ 1, /*NumSamplers: UINT = */ 1, /*ppSamplers = */ &ptmp804);
 const D3D11_SHADER_RESOURCE_VIEW_DESC tmp805 = {/*Format = */ DXGI_FORMAT(2), /*ViewDimension = */ D3D11_SRV_DIMENSION(4), /*None = */ {/*Texture2D = */ {/*MostDetailedMip = */ 0, /*MipLevels = */ 1}}};
-// redeclare: p0x28052d27200: ID3D11ShaderResourceView * was ID3D11ShaderResourceView *, dead
 ID3D11ShaderResourceView * p0x28052d27200_2;
 /*1164*/ /*ID3D11Device5*/p0x28050147be8->CreateShaderResourceView(/*pResource: ID3D11Resource * = */ p0x28052d69a78, /*pDesc = */ &tmp805, /*ppSRView: ID3D11ShaderResourceView * * = */ &p0x28052d27200_2);// = 0
 GUID dtmp806 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -2261,12 +2241,10 @@ D3D11_SHADER_RESOURCE_VIEW_DESC ltmp808;
 /*1172*/ /*ID3D11ShaderResourceView1*/p0x28052d27200_2->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp808);
 ID3D11SamplerState * const ptmp809 = p0x28052d76320;
 /*1173*/ /*ID3D11DeviceContext4*/ctx->PSSetSamplers(/*StartSlot: UINT = */ 0, /*NumSamplers: UINT = */ 1, /*ppSamplers = */ &ptmp809);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1174*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1175*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp810 = p0x28052d26d00;
 /*1176*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp810);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1177*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1178*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp811;
@@ -2509,7 +2487,6 @@ static const unsigned char btmp901[] = {0x0, 0x0, 0x80, 0x40, 0x0, 0x0, 0x80, 0x
 /*1310*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d187b8, /*Subresource: UINT = */ 0);
 ID3D11RenderTargetView * const ptmp902 = p0x28052d6cff8;
 /*1311*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp902, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1312*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1313*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_RENDER_TARGET_VIEW_DESC ltmp903;
@@ -2531,8 +2508,6 @@ ID3D11ShaderResourceView * const ptmp907 = p0x28052d28640;
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp908;
 /*1325*/ /*ID3D11ShaderResourceView1*/p0x28052d28640->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp908);
 const D3D11_BUFFER_DESC tmp909 = {/*ByteWidth = */ 64, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 4, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0, /*StructureByteStride = */ 0};
-// redeclare: p0x28052d6ab78: ID3D11Buffer * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d6ab78_2: ID3D11Buffer * was ID3D11Texture2D *, dead
 ID3D11Buffer * p0x28052d6ab78_3;
 /*1326*/ /*ID3D11Device5*/p0x28050147be8->CreateBuffer(/*pDesc = */ &tmp909, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppBuffer: ID3D11Buffer * * = */ &p0x28052d6ab78_3);// = 0
 static const unsigned char btmp910[] = {0x0, 0x0, 0x80, 0x3a, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0xbf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0x3a, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0xbf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 0x0, 0x80, 0xb4, 0x1, 0x0, 0x0, 0x34, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0x3f};
@@ -2562,7 +2537,6 @@ static const unsigned char btmp920[] = {0x1, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 
 /*1338*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d187b8, /*Subresource: UINT = */ 0);
 ID3D11RenderTargetView * const ptmp921 = p0x28052d6cff8;
 /*1339*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp921, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1340*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1341*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_RENDER_TARGET_VIEW_DESC ltmp922;
@@ -2618,7 +2592,6 @@ ID3D11ShaderResourceView * const ptmp936 = p0x28052d27a80;
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp937;
 /*1377*/ /*ID3D11ShaderResourceView1*/p0x28052d27a80->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp937);
 const D3D11_BUFFER_DESC tmp938 = {/*ByteWidth = */ 64, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 4, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0, /*StructureByteStride = */ 0};
-// redeclare: p0x28052d6ae38: ID3D11Buffer * was ID3D11Texture2D *, dead
 ID3D11Buffer * p0x28052d6ae38_2;
 /*1378*/ /*ID3D11Device5*/p0x28050147be8->CreateBuffer(/*pDesc = */ &tmp938, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppBuffer: ID3D11Buffer * * = */ &p0x28052d6ae38_2);// = 0
 static const unsigned char btmp939[] = {0x0, 0x0, 0x80, 0x3a, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0xbf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0x3a, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0xbf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 0x0, 0x80, 0xb4, 0x1, 0x0, 0x0, 0x34, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0x3f};
@@ -2654,7 +2627,6 @@ static const unsigned char btmp951[] = {0x1, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 
 /*1393*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d187b8, /*Subresource: UINT = */ 0);
 ID3D11RenderTargetView * const ptmp952 = p0x28052d6cff8;
 /*1394*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp952, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1395*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1396*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_RENDER_TARGET_VIEW_DESC ltmp953;
@@ -2839,7 +2811,6 @@ ID3D11ShaderResourceView * const ptmp1012 = p0x2805015edc0;
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1013;
 /*1506*/ /*ID3D11ShaderResourceView1*/p0x2805015edc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1013);
 const D3D11_BUFFER_DESC tmp1014 = {/*ByteWidth = */ 64, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 4, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0, /*StructureByteStride = */ 0};
-// redeclare: p0x28052d173f8: ID3D11Buffer * was ID3D11Buffer *, dead
 ID3D11Buffer * p0x28052d173f8_2;
 /*1507*/ /*ID3D11Device5*/p0x28050147be8->CreateBuffer(/*pDesc = */ &tmp1014, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppBuffer: ID3D11Buffer * * = */ &p0x28052d173f8_2);// = 0
 static const unsigned char btmp1015[] = {0x0, 0x0, 0x0, 0x3b, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0xbf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0x3b, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0xbf, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 0x0, 0x80, 0xb4, 0x1, 0x0, 0x0, 0x34, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0x3f};
@@ -2959,7 +2930,6 @@ ID3D11SamplerState * p0x28052d75a20;
 ID3D11SamplerState * const ptmp1052 = p0x28052d75a20;
 /*1581*/ /*ID3D11DeviceContext4*/ctx->PSSetSamplers(/*StartSlot: UINT = */ 1, /*NumSamplers: UINT = */ 1, /*ppSamplers = */ &ptmp1052);
 const D3D11_SHADER_RESOURCE_VIEW_DESC tmp1053 = {/*Format = */ DXGI_FORMAT(28), /*ViewDimension = */ D3D11_SRV_DIMENSION(4), /*None = */ {/*Texture2D = */ {/*MostDetailedMip = */ 0, /*MipLevels = */ 1}}};
-// redeclare: p0x2805015f2c0: ID3D11ShaderResourceView * was ID3D11ShaderResourceView *, dead
 ID3D11ShaderResourceView * p0x2805015f2c0_2;
 /*1582*/ /*ID3D11Device5*/p0x28050147be8->CreateShaderResourceView(/*pResource: ID3D11Resource * = */ p0x28052d7a8b8, /*pDesc = */ &tmp1053, /*ppSRView: ID3D11ShaderResourceView * * = */ &p0x2805015f2c0_2);// = 0
 GUID dtmp1054 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -3134,12 +3104,10 @@ ID3D11ShaderResourceView * const ptmp1104 = p0x2805015edc0;
 /*1697*/ /*ID3D11Texture2D1*/p0x28052d6c778->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1105;
 /*1698*/ /*ID3D11ShaderResourceView1*/p0x2805015edc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1105);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1699*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1700*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1106 = p0x28052d26d00;
 /*1701*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1106);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1702*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1703*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1107;
@@ -3177,7 +3145,6 @@ static const FLOAT atmp1119[] = {0.0, 0.0, 0.0, 0.0};
 ID3D11SamplerState * const ptmp1120 = p0x28052d76320;
 /*1721*/ /*ID3D11DeviceContext4*/ctx->VSSetSamplers(/*StartSlot: UINT = */ 0, /*NumSamplers: UINT = */ 1, /*ppSamplers = */ &ptmp1120);
 const D3D11_SHADER_RESOURCE_VIEW_DESC tmp1121 = {/*Format = */ DXGI_FORMAT(87), /*ViewDimension = */ D3D11_SRV_DIMENSION(4), /*None = */ {/*Texture2D = */ {/*MostDetailedMip = */ 0, /*MipLevels = */ 1}}};
-// redeclare: p0x2805015e880: ID3D11ShaderResourceView * was ID3D11ShaderResourceView *, dead
 ID3D11ShaderResourceView * p0x2805015e880_2;
 /*1722*/ /*ID3D11Device5*/p0x28050147be8->CreateShaderResourceView(/*pResource: ID3D11Resource * = */ p0x28052d697b8, /*pDesc = */ &tmp1121, /*ppSRView: ID3D11ShaderResourceView * * = */ &p0x2805015e880_2);// = 0
 GUID dtmp1122 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -3240,12 +3207,10 @@ D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1136;
 /*1766*/ /*ID3D11ShaderResourceView1*/p0x2805015e880_2->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1136);
 ID3D11SamplerState * const ptmp1137 = p0x28052d76320;
 /*1767*/ /*ID3D11DeviceContext4*/ctx->PSSetSamplers(/*StartSlot: UINT = */ 1, /*NumSamplers: UINT = */ 1, /*ppSamplers = */ &ptmp1137);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1768*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1769*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1138 = p0x28052d26d00;
 /*1770*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1138);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1771*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1772*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1139;
@@ -3475,12 +3440,10 @@ ID3D11ShaderResourceView * const ptmp1211 = p0x2805015f100;
 /*1919*/ /*ID3D11Texture2D1*/p0x28052d6c1f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1212;
 /*1920*/ /*ID3D11ShaderResourceView1*/p0x2805015f100->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1212);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1921*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1922*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1213 = p0x28052d26d00;
 /*1923*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1213);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1924*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1925*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1214;
@@ -3565,12 +3528,10 @@ ID3D11ShaderResourceView * const ptmp1237 = p0x2805015f600;
 /*1979*/ /*ID3D11Texture2D1*/p0x28052d16e38->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1238;
 /*1980*/ /*ID3D11ShaderResourceView1*/p0x2805015f600->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1238);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1981*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1982*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1239 = p0x28052d26d00;
 /*1983*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1239);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*1984*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*1985*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1240;
@@ -3637,12 +3598,10 @@ ID3D11ShaderResourceView * const ptmp1258 = p0x2805015edc0;
 /*2028*/ /*ID3D11Texture2D1*/p0x28052d6c778->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1259;
 /*2029*/ /*ID3D11ShaderResourceView1*/p0x2805015edc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1259);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2030*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*2031*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1260 = p0x28052d26d00;
 /*2032*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1260);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2033*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*2034*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1261;
@@ -4013,12 +3972,10 @@ ID3D11ShaderResourceView * const ptmp1383 = p0x2805015edc0;
 /*2272*/ /*ID3D11Texture2D1*/p0x28052d6c778->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1384;
 /*2273*/ /*ID3D11ShaderResourceView1*/p0x2805015edc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1384);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2274*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*2275*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1385 = p0x28052d26d00;
 /*2276*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1385);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2277*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*2278*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1386;
@@ -4116,12 +4073,10 @@ ID3D11ShaderResourceView * const ptmp1413 = p0x2805015e880_2;
 /*2341*/ /*ID3D11Texture2D1*/p0x28052d697b8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1414;
 /*2342*/ /*ID3D11ShaderResourceView1*/p0x2805015e880_2->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1414);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2343*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*2344*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1415 = p0x28052d26d00;
 /*2345*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1415);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2346*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*2347*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1416;
@@ -4500,7 +4455,6 @@ D3D11_MAPPED_SUBRESOURCE ltmp1549;
 void * p0x280509ec000 = ltmp1549.pData; // size: None
 /*2580*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d7c238, /*Subresource: UINT = */ 0);
 const D3D11_TEXTURE2D_DESC tmp1551 = {/*Width = */ 1024, /*Height = */ 2, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(4), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 136, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0};
-// redeclare: p0x28052d7b3f8: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x28052d7b3f8_2;
 /*2581*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp1551, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d7b3f8_2);// = 0
 GUID dtmp1552 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -4513,7 +4467,6 @@ D3D11_TEXTURE2D_DESC ltmp1554;
 // kill declaration  p0x28052d7c238
 p0x28052d7c238 = 0;
 const D3D11_TEXTURE2D_DESC tmp1555 = {/*Width = */ 1024, /*Height = */ 2, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(2), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(3), /*BindFlags = */ 0, /*CPUAccessFlags = */ 196608, /*MiscFlags = */ 0};
-// redeclare: p0x28052d7c238: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x28052d7c238_2;
 /*2587*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp1555, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d7c238_2);// = 0
 GUID dtmp1556 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -4545,8 +4498,6 @@ D3D11_MAPPED_SUBRESOURCE ltmp1565;
 p0x280509ec000 = ltmp1565.pData; // size: None
 /*2604*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d7b9b8, /*Subresource: UINT = */ 0);
 const D3D11_TEXTURE2D_DESC tmp1567 = {/*Width = */ 1024, /*Height = */ 2, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(2), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 136, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0};
-// redeclare: p0x28052d7c238: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x28052d7c238_3;
 /*2605*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp1567, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d7c238_3);// = 0
 GUID dtmp1568 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -4568,7 +4519,6 @@ ID3D11ShaderResourceView * const tmp1573 = 0;
 /*2614*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &tmp1573);
 ID3D11RenderTargetView * const ptmp1574 = p0x28052d6cff8;
 /*2615*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp1574, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2616*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*2617*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_RENDER_TARGET_VIEW_DESC ltmp1575;
@@ -4623,7 +4573,6 @@ static const unsigned char btmp1591[] = {0x0, 0x0, 0x80, 0x40, 0x0, 0x0, 0x80, 0
 /*2647*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d187b8, /*Subresource: UINT = */ 0);
 ID3D11RenderTargetView * const ptmp1592 = p0x28052d6cff8;
 /*2648*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp1592, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2649*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*2650*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_RENDER_TARGET_VIEW_DESC ltmp1593;
@@ -4695,7 +4644,6 @@ static const unsigned char btmp1614[] = {0x0, 0x0, 0x80, 0x40, 0x0, 0x0, 0x80, 0
 /*2693*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d187b8, /*Subresource: UINT = */ 0);
 ID3D11RenderTargetView * const ptmp1615 = p0x28052d6cff8;
 /*2694*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp1615, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2695*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*2696*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_RENDER_TARGET_VIEW_DESC ltmp1616;
@@ -4781,15 +4729,11 @@ ID3D11ShaderResourceView * p0x28052d7f440;
 /*2745*/ /*ID3D11Device5*/p0x28050147be8->CreateShaderResourceView(/*pResource: ID3D11Resource * = */ p0x28052d7c238_3, /*pDesc = */ &tmp1645, /*ppSRView: ID3D11ShaderResourceView * * = */ &p0x28052d7f440);// = 0
 GUID dtmp1646 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
 /*2747*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->SetPrivateData(/*guid = */ dtmp1646, /*DataSize: UINT = */ 22, /*pData: const void * = */ "ANGLE_TexStorage2D.SRV");// = 0
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 ID3D11Resource * p0x28052d7c238_4;
 /*2748*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*2749*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1647 = p0x28052d7f440;
 /*2750*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1647);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2751*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*2752*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1648;
@@ -4829,13 +4773,11 @@ ID3D11ShaderResourceView * p0x28052d7f600;
 /*2775*/ /*ID3D11Device5*/p0x28050147be8->CreateShaderResourceView(/*pResource: ID3D11Resource * = */ p0x28052d7b3f8_2, /*pDesc = */ &tmp1657, /*ppSRView: ID3D11ShaderResourceView * * = */ &p0x28052d7f600);// = 0
 GUID dtmp1658 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
 /*2777*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->SetPrivateData(/*guid = */ dtmp1658, /*DataSize: UINT = */ 22, /*pData: const void * = */ "ANGLE_TexStorage2D.SRV");// = 0
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 ID3D11Resource * p0x28052d7b3f8_3;
 /*2778*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*2779*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1659 = p0x28052d7f600;
 /*2780*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 5, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1659);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2781*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*2782*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1660;
@@ -4940,14 +4882,10 @@ static const FLOAT atmp1694[] = {0.0, 0.0, 0.0, 0.0};
 /*2843*/ /*ID3D11DeviceContext4*/ctx->PSSetShader(/*pPixelShader: ID3D11PixelShader * = */ p0x28052d36350, /*ppClassInstances: ID3D11ClassInstance * const * = */ 0, /*NumClassInstances: UINT = */ 0);
 ID3D11SamplerState * const ptmp1695 = p0x28052d03b20;
 /*2844*/ /*ID3D11DeviceContext4*/ctx->VSSetSamplers(/*StartSlot: UINT = */ 0, /*NumSamplers: UINT = */ 1, /*ppSamplers = */ &ptmp1695);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2845*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*2846*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1696 = p0x28052d7f440;
 /*2847*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1696);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2848*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*2849*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1697;
@@ -4976,12 +4914,10 @@ ID3D11ShaderResourceView * const ptmp1702 = p0x28052d7fcc0;
 /*2867*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1703;
 /*2868*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1703);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2869*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*2870*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1704 = p0x28052d7f600;
 /*2871*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 4, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1704);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2872*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*2873*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1705;
@@ -5026,14 +4962,10 @@ ID3D11ShaderResourceView * const ptmp1718 = p0x2805015f100;
 /*2898*/ /*ID3D11Texture2D1*/p0x28052d6c1f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1719;
 /*2899*/ /*ID3D11ShaderResourceView1*/p0x2805015f100->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1719);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2900*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*2901*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1720 = p0x28052d7f440;
 /*2902*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1720);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2903*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*2904*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1721;
@@ -5062,12 +4994,10 @@ ID3D11ShaderResourceView * const ptmp1726 = p0x28052d7fcc0;
 /*2922*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1727;
 /*2923*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1727);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2924*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*2925*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1728 = p0x28052d7f600;
 /*2926*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 5, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1728);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2927*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*2928*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1729;
@@ -5122,14 +5052,10 @@ ID3D11ShaderResourceView * const ptmp1745 = p0x2805015f600;
 /*2959*/ /*ID3D11Texture2D1*/p0x28052d16e38->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1746;
 /*2960*/ /*ID3D11ShaderResourceView1*/p0x2805015f600->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1746);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2961*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*2962*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1747 = p0x28052d7f440;
 /*2963*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1747);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2964*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*2965*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1748;
@@ -5158,12 +5084,10 @@ ID3D11ShaderResourceView * const ptmp1753 = p0x28052d7fcc0;
 /*2983*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1754;
 /*2984*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1754);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2985*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*2986*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1755 = p0x28052d7f600;
 /*2987*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 5, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1755);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*2988*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*2989*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1756;
@@ -5202,14 +5126,10 @@ ID3D11ShaderResourceView * const ptmp1766 = p0x2805015f100;
 /*3012*/ /*ID3D11Texture2D1*/p0x28052d6c1f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1767;
 /*3013*/ /*ID3D11ShaderResourceView1*/p0x2805015f100->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1767);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3014*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3015*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1768 = p0x28052d7f440;
 /*3016*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1768);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3017*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3018*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1769;
@@ -5238,12 +5158,10 @@ ID3D11ShaderResourceView * const ptmp1774 = p0x28052d7fcc0;
 /*3036*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1775;
 /*3037*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1775);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3038*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3039*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1776 = p0x28052d7f600;
 /*3040*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 5, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1776);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3041*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3042*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1777;
@@ -5297,14 +5215,10 @@ ID3D11ShaderResourceView * const ptmp1792 = p0x28052d80880;
 /*3075*/ /*ID3D11Texture2D1*/p0x28052d7c4f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1793;
 /*3076*/ /*ID3D11ShaderResourceView1*/p0x28052d80880->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1793);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3077*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3078*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1794 = p0x28052d7f440;
 /*3079*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1794);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3080*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3081*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1795;
@@ -5333,12 +5247,10 @@ ID3D11ShaderResourceView * const ptmp1800 = p0x28052d7fcc0;
 /*3099*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1801;
 /*3100*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1801);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3101*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3102*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1802 = p0x28052d7f600;
 /*3103*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 5, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1802);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3104*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3105*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1803;
@@ -5388,14 +5300,10 @@ static const FLOAT atmp1818[] = {0.0, 0.0, 0.0, 0.0};
 /*3133*/ /*ID3D11DeviceContext4*/ctx->PSSetShader(/*pPixelShader: ID3D11PixelShader * = */ p0x28052d36790, /*ppClassInstances: ID3D11ClassInstance * const * = */ 0, /*NumClassInstances: UINT = */ 0);
 ID3D11SamplerState * const ptmp1819 = p0x28052d03b20;
 /*3134*/ /*ID3D11DeviceContext4*/ctx->VSSetSamplers(/*StartSlot: UINT = */ 0, /*NumSamplers: UINT = */ 1, /*ppSamplers = */ &ptmp1819);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3135*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3136*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1820 = p0x28052d7f440;
 /*3137*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1820);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3138*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3139*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1821;
@@ -5424,22 +5332,18 @@ ID3D11ShaderResourceView * const ptmp1826 = p0x28052d7fcc0;
 /*3157*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1827;
 /*3158*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1827);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3159*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3160*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1828 = p0x28052d7f600;
 /*3161*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 4, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1828);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3162*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3163*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1829;
 /*3164*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1829);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3165*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3166*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1830 = p0x28052d26d00;
 /*3167*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1830);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3168*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3169*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1831;
@@ -5476,14 +5380,10 @@ ID3D11ShaderResourceView * const ptmp1842 = p0x2805015f100;
 /*3189*/ /*ID3D11Texture2D1*/p0x28052d6c1f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1843;
 /*3190*/ /*ID3D11ShaderResourceView1*/p0x2805015f100->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1843);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3191*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3192*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1844 = p0x28052d7f440;
 /*3193*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1844);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3194*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3195*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1845;
@@ -5512,12 +5412,10 @@ ID3D11ShaderResourceView * const ptmp1850 = p0x28052d7fcc0;
 /*3213*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1851;
 /*3214*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1851);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3215*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3216*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1852 = p0x28052d7f600;
 /*3217*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 5, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1852);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3218*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3219*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1853;
@@ -5532,12 +5430,10 @@ D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1855;
 /*3226*/ /*ID3D11ShaderResourceView1*/p0x2805015f100->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1855);
 ID3D11SamplerState * const ptmp1856 = p0x28052d76320;
 /*3227*/ /*ID3D11DeviceContext4*/ctx->PSSetSamplers(/*StartSlot: UINT = */ 1, /*NumSamplers: UINT = */ 1, /*ppSamplers = */ &ptmp1856);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3228*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3229*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1857 = p0x28052d26d00;
 /*3230*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1857);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3231*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3232*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1858;
@@ -5584,14 +5480,10 @@ ID3D11ShaderResourceView * const ptmp1872 = p0x2805015e880_2;
 /*3257*/ /*ID3D11Texture2D1*/p0x28052d697b8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1873;
 /*3258*/ /*ID3D11ShaderResourceView1*/p0x2805015e880_2->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1873);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3259*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3260*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1874 = p0x28052d7f440;
 /*3261*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1874);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3262*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3263*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1875;
@@ -5620,12 +5512,10 @@ ID3D11ShaderResourceView * const ptmp1880 = p0x28052d7fcc0;
 /*3281*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1881;
 /*3282*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1881);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3283*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3284*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1882 = p0x28052d7f600;
 /*3285*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 5, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1882);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3286*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3287*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1883;
@@ -5638,12 +5528,10 @@ ID3D11ShaderResourceView * const ptmp1884 = p0x2805015e880_2;
 /*3293*/ /*ID3D11Texture2D1*/p0x28052d697b8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1885;
 /*3294*/ /*ID3D11ShaderResourceView1*/p0x2805015e880_2->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1885);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3295*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3296*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1886 = p0x28052d26d00;
 /*3297*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1886);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3298*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3299*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1887;
@@ -5701,14 +5589,10 @@ static const FLOAT atmp1906[] = {0.0, 0.0, 0.0, 0.0};
 /*3332*/ /*ID3D11DeviceContext4*/ctx->PSSetShader(/*pPixelShader: ID3D11PixelShader * = */ p0x28052d36350, /*ppClassInstances: ID3D11ClassInstance * const * = */ 0, /*NumClassInstances: UINT = */ 0);
 ID3D11SamplerState * const ptmp1907 = p0x28052d03b20;
 /*3333*/ /*ID3D11DeviceContext4*/ctx->VSSetSamplers(/*StartSlot: UINT = */ 0, /*NumSamplers: UINT = */ 1, /*ppSamplers = */ &ptmp1907);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3334*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3335*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1908 = p0x28052d7f440;
 /*3336*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1908);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3337*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3338*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1909;
@@ -5737,12 +5621,10 @@ ID3D11ShaderResourceView * const ptmp1914 = p0x28052d7fcc0;
 /*3356*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1915;
 /*3357*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1915);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3358*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3359*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1916 = p0x28052d7f600;
 /*3360*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 4, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1916);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3361*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3362*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1917;
@@ -5787,14 +5669,10 @@ ID3D11ShaderResourceView * const ptmp1930 = p0x2805015f100;
 /*3387*/ /*ID3D11Texture2D1*/p0x28052d6c1f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1931;
 /*3388*/ /*ID3D11ShaderResourceView1*/p0x2805015f100->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1931);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3389*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3390*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1932 = p0x28052d7f440;
 /*3391*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1932);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3392*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3393*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1933;
@@ -5823,12 +5701,10 @@ ID3D11ShaderResourceView * const ptmp1938 = p0x28052d7fcc0;
 /*3411*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1939;
 /*3412*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1939);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3413*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3414*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1940 = p0x28052d7f600;
 /*3415*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 5, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1940);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3416*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3417*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1941;
@@ -5841,12 +5717,10 @@ ID3D11ShaderResourceView * const ptmp1942 = p0x2805015f100;
 /*3423*/ /*ID3D11Texture2D1*/p0x28052d6c1f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1943;
 /*3424*/ /*ID3D11ShaderResourceView1*/p0x2805015f100->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1943);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3425*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3426*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1944 = p0x28052d26d00;
 /*3427*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1944);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3428*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3429*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1945;
@@ -5883,14 +5757,10 @@ ID3D11ShaderResourceView * const ptmp1956 = p0x2805015f600;
 /*3447*/ /*ID3D11Texture2D1*/p0x28052d16e38->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1957;
 /*3448*/ /*ID3D11ShaderResourceView1*/p0x2805015f600->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1957);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3449*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3450*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1958 = p0x28052d7f440;
 /*3451*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1958);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3452*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3453*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1959;
@@ -5919,12 +5789,10 @@ ID3D11ShaderResourceView * const ptmp1964 = p0x28052d7fcc0;
 /*3471*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1965;
 /*3472*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1965);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3473*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3474*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1966 = p0x28052d7f600;
 /*3475*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 5, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1966);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3476*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3477*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1967;
@@ -5937,12 +5805,10 @@ ID3D11ShaderResourceView * const ptmp1968 = p0x2805015f600;
 /*3483*/ /*ID3D11Texture2D1*/p0x28052d16e38->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1969;
 /*3484*/ /*ID3D11ShaderResourceView1*/p0x2805015f600->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1969);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3485*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3486*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1970 = p0x28052d26d00;
 /*3487*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1970);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3488*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3489*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1971;
@@ -5969,14 +5835,10 @@ static const FLOAT atmp1979[] = {0.0, 0.0, 0.0, 0.0};
 /*3502*/ /*ID3D11DeviceContext4*/ctx->PSSetShader(/*pPixelShader: ID3D11PixelShader * = */ p0x28052d36790, /*ppClassInstances: ID3D11ClassInstance * const * = */ 0, /*NumClassInstances: UINT = */ 0);
 ID3D11SamplerState * const ptmp1980 = p0x28052d03b20;
 /*3503*/ /*ID3D11DeviceContext4*/ctx->VSSetSamplers(/*StartSlot: UINT = */ 0, /*NumSamplers: UINT = */ 1, /*ppSamplers = */ &ptmp1980);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3504*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3505*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1981 = p0x28052d7f440;
 /*3506*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1981);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3507*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3508*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1982;
@@ -6005,22 +5867,18 @@ ID3D11ShaderResourceView * const ptmp1987 = p0x28052d7fcc0;
 /*3526*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1988;
 /*3527*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1988);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3528*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3529*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1989 = p0x28052d7f600;
 /*3530*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 4, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1989);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3531*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3532*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1990;
 /*3533*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp1990);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3534*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3535*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp1991 = p0x28052d26d00;
 /*3536*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp1991);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3537*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3538*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp1992;
@@ -6076,14 +5934,10 @@ static const FLOAT atmp2011[] = {0.0, 0.0, 0.0, 0.0};
 /*3569*/ /*ID3D11DeviceContext4*/ctx->OMSetDepthStencilState(/*pDepthStencilState: ID3D11DepthStencilState * = */ p0x28052d038e0, /*StencilRef: UINT = */ 0);
 /*3570*/ /*ID3D11DeviceContext4*/ctx->VSSetShader(/*pVertexShader: ID3D11VertexShader * = */ p0x28052d36650, /*ppClassInstances: ID3D11ClassInstance * const * = */ 0, /*NumClassInstances: UINT = */ 0);
 /*3571*/ /*ID3D11DeviceContext4*/ctx->PSSetShader(/*pPixelShader: ID3D11PixelShader * = */ p0x28052d36790, /*ppClassInstances: ID3D11ClassInstance * const * = */ 0, /*NumClassInstances: UINT = */ 0);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3572*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3573*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2012 = p0x28052d7f440;
 /*3574*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2012);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3575*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3576*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2013;
@@ -6112,22 +5966,18 @@ ID3D11ShaderResourceView * const ptmp2018 = p0x28052d7fcc0;
 /*3594*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2019;
 /*3595*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp2019);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3596*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3597*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2020 = p0x28052d7f600;
 /*3598*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 4, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2020);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3599*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3600*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2021;
 /*3601*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp2021);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3602*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3603*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2022 = p0x28052d26d00;
 /*3604*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2022);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3605*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3606*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2023;
@@ -6177,14 +6027,10 @@ ID3D11ShaderResourceView * const ptmp2038 = p0x2805015e880_2;
 /*3633*/ /*ID3D11Texture2D1*/p0x28052d697b8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2039;
 /*3634*/ /*ID3D11ShaderResourceView1*/p0x2805015e880_2->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp2039);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3635*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3636*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2040 = p0x28052d7f440;
 /*3637*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2040);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3638*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3639*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2041;
@@ -6213,12 +6059,10 @@ ID3D11ShaderResourceView * const ptmp2046 = p0x28052d7fcc0;
 /*3657*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2047;
 /*3658*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp2047);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3659*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3660*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2048 = p0x28052d7f600;
 /*3661*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 5, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2048);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3662*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3663*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2049;
@@ -6231,12 +6075,10 @@ ID3D11ShaderResourceView * const ptmp2050 = p0x2805015e880_2;
 /*3669*/ /*ID3D11Texture2D1*/p0x28052d697b8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2051;
 /*3670*/ /*ID3D11ShaderResourceView1*/p0x2805015e880_2->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp2051);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3671*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3672*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2052 = p0x28052d26d00;
 /*3673*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2052);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3674*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3675*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2053;
@@ -6283,14 +6125,10 @@ ID3D11ShaderResourceView * const ptmp2067 = p0x2805015f100;
 /*3700*/ /*ID3D11Texture2D1*/p0x28052d6c1f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2068;
 /*3701*/ /*ID3D11ShaderResourceView1*/p0x2805015f100->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp2068);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3702*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3703*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2069 = p0x28052d7f440;
 /*3704*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2069);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3705*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3706*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2070;
@@ -6319,12 +6157,10 @@ ID3D11ShaderResourceView * const ptmp2075 = p0x28052d7fcc0;
 /*3724*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2076;
 /*3725*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp2076);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3726*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3727*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2077 = p0x28052d7f600;
 /*3728*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 5, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2077);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3729*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3730*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2078;
@@ -6337,12 +6173,10 @@ ID3D11ShaderResourceView * const ptmp2079 = p0x2805015f100;
 /*3736*/ /*ID3D11Texture2D1*/p0x28052d6c1f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2080;
 /*3737*/ /*ID3D11ShaderResourceView1*/p0x2805015f100->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp2080);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3738*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3739*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2081 = p0x28052d26d00;
 /*3740*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2081);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3741*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3742*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2082;
@@ -6431,14 +6265,10 @@ ID3D11ShaderResourceView * const ptmp2112 = p0x2805015f100;
 /*3794*/ /*ID3D11Texture2D1*/p0x28052d6c1f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2113;
 /*3795*/ /*ID3D11ShaderResourceView1*/p0x2805015f100->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp2113);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3796*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3797*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2114 = p0x28052d7f440;
 /*3798*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2114);
-// redeclare: p0x28052d7c238: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7c238_2: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3799*/ /*ID3D11ShaderResourceView1*/p0x28052d7f440->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7c238_4);
 /*3800*/ /*ID3D11Texture2D1*/p0x28052d7c238_3->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2115;
@@ -6467,12 +6297,10 @@ ID3D11ShaderResourceView * const ptmp2120 = p0x28052d7fcc0;
 /*3818*/ /*ID3D11Texture2D1*/p0x28052d7b6f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2121;
 /*3819*/ /*ID3D11ShaderResourceView1*/p0x28052d7fcc0->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp2121);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3820*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3821*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2122 = p0x28052d7f600;
 /*3822*/ /*ID3D11DeviceContext4*/ctx->VSSetShaderResources(/*StartSlot: UINT = */ 5, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2122);
-// redeclare: p0x28052d7b3f8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3823*/ /*ID3D11ShaderResourceView1*/p0x28052d7f600->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b3f8_3);
 /*3824*/ /*ID3D11Texture2D1*/p0x28052d7b3f8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2123;
@@ -6485,12 +6313,10 @@ ID3D11ShaderResourceView * const ptmp2124 = p0x2805015f100;
 /*3830*/ /*ID3D11Texture2D1*/p0x28052d6c1f8->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2125;
 /*3831*/ /*ID3D11ShaderResourceView1*/p0x2805015f100->GetDesc(/*pDesc: D3D11_SHADER_RESOURCE_VIEW_DESC * = */ &ltmp2125);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3832*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3833*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2126 = p0x28052d26d00;
 /*3834*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2126);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*3835*/ /*ID3D11ShaderResourceView1*/p0x28052d26d00->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*3836*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2127;
@@ -6535,7 +6361,6 @@ const DXGI_PRESENT_PARAMETERS tmp2207 = {/*DirtyRectsCount = */ 1, /*pDirtyRects
 /*3994*/ /*ID3D11Query1*/p0x280501fa540->Release();// = 1
 /*3995*/ /*ID3D11DeviceContext4*/ctx->Flush();
 const D3D11_TEXTURE2D_DESC tmp2209 = {/*Width = */ 1024, /*Height = */ 2, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(2), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(3), /*BindFlags = */ 0, /*CPUAccessFlags = */ 196608, /*MiscFlags = */ 0};
-// redeclare: p0x28052d7b9b8: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x28052d7b9b8_2;
 /*3996*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp2209, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d7b9b8_2);// = 0
 GUID dtmp2210 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -6558,8 +6383,6 @@ D3D11_TEXTURE2D_DESC ltmp2216;
 p0x28052d7b9b8 = 0;
 p0x28052d7b9b8_2 = 0;
 const D3D11_TEXTURE2D_DESC tmp2217 = {/*Width = */ 1024, /*Height = */ 2, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(4), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(3), /*BindFlags = */ 0, /*CPUAccessFlags = */ 196608, /*MiscFlags = */ 0};
-// redeclare: p0x28052d7b9b8: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_2: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x28052d7b9b8_3;
 /*4008*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp2217, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d7b9b8_3);// = 0
 GUID dtmp2218 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -6583,9 +6406,6 @@ p0x28052d7b9b8 = 0;
 p0x28052d7b9b8_2 = 0;
 p0x28052d7b9b8_3 = 0;
 const D3D11_TEXTURE2D_DESC tmp2225 = {/*Width = */ 1024, /*Height = */ 2, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(2), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(3), /*BindFlags = */ 0, /*CPUAccessFlags = */ 196608, /*MiscFlags = */ 0};
-// redeclare: p0x28052d7b9b8: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_2: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_3: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x28052d7b9b8_4;
 /*4020*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp2225, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d7b9b8_4);// = 0
 GUID dtmp2226 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -6610,10 +6430,6 @@ p0x28052d7b9b8_2 = 0;
 p0x28052d7b9b8_3 = 0;
 p0x28052d7b9b8_4 = 0;
 const D3D11_TEXTURE2D_DESC tmp2233 = {/*Width = */ 1024, /*Height = */ 2, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(2), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(3), /*BindFlags = */ 0, /*CPUAccessFlags = */ 196608, /*MiscFlags = */ 0};
-// redeclare: p0x28052d7b9b8: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_2: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_3: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_4: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x28052d7b9b8_5;
 /*4032*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp2233, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d7b9b8_5);// = 0
 GUID dtmp2234 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -6648,7 +6464,6 @@ ID3D11ShaderResourceView * const tmp2243 = 0;
 /*4047*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 1, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &tmp2243);
 ID3D11RenderTargetView * const ptmp2244 = p0x28052d6cff8;
 /*4048*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp2244, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*4049*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*4050*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_RENDER_TARGET_VIEW_DESC ltmp2245;
@@ -6700,7 +6515,6 @@ static const unsigned char btmp2261[] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
 /*4077*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d187b8, /*Subresource: UINT = */ 0);
 ID3D11RenderTargetView * const ptmp2262 = p0x28052d6cff8;
 /*4078*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp2262, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*4079*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*4080*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_RENDER_TARGET_VIEW_DESC ltmp2263;
@@ -6772,7 +6586,6 @@ static const unsigned char btmp2284[] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
 /*4123*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d187b8, /*Subresource: UINT = */ 0);
 ID3D11RenderTargetView * const ptmp2285 = p0x28052d6cff8;
 /*4124*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp2285, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*4125*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*4126*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 static const FLOAT atmp2287[] = {0.0, 0.0, 0.0, 0.0};
@@ -6920,16 +6733,6 @@ const DXGI_PRESENT_PARAMETERS tmp2404 = {/*DirtyRectsCount = */ 1, /*pDirtyRects
 /*5427*/ /*ID3D11Query1*/p0x280501fb240->AddRef();// = 2
 /*5429*/ /*ID3D11Query1*/p0x280501fb240->Release();// = 1
 const D3D11_TEXTURE2D_DESC tmp2889 = {/*Width = */ 512, /*Height = */ 512, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(61), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 40, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0};
-// redeclare: p0x28052d7b9b8: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_2: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_3: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_4: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_5: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_6: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_7: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_8: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_9: ID3D11Texture2D * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_10: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x28052d7b9b8_11;
 /*5430*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp2889, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d7b9b8_11);// = 0
 GUID dtmp2890 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -6960,31 +6763,11 @@ ID3D11ShaderResourceView * p0x28052d91480;
 /*5446*/ /*ID3D11Device5*/p0x28050147be8->CreateShaderResourceView(/*pResource: ID3D11Resource * = */ p0x28052d7b9b8_11, /*pDesc = */ &tmp2901, /*ppSRView: ID3D11ShaderResourceView * * = */ &p0x28052d91480);// = 0
 GUID dtmp2902 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
 /*5448*/ /*ID3D11ShaderResourceView1*/p0x28052d91480->SetPrivateData(/*guid = */ dtmp2902, /*DataSize: UINT = */ 22, /*pData: const void * = */ "ANGLE_TexStorage2D.SRV");// = 0
-// redeclare: p0x28052d7b9b8: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_2: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_3: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_4: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_5: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_6: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_7: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_8: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_9: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_10: ID3D11Resource * was ID3D11Texture2D *, dead
 ID3D11Resource * p0x28052d7b9b8_12;
 /*5449*/ /*ID3D11ShaderResourceView1*/p0x28052d91480->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b9b8_12);
 /*5450*/ /*ID3D11Texture2D1*/p0x28052d7b9b8_11->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2903 = p0x28052d91480;
 /*5451*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2903);
-// redeclare: p0x28052d7b9b8: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_2: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_3: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_4: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_5: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_6: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_7: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_8: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_9: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_10: ID3D11Resource * was ID3D11Texture2D *, dead
 /*5452*/ /*ID3D11ShaderResourceView1*/p0x28052d91480->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b9b8_12);
 /*5453*/ /*ID3D11Texture2D1*/p0x28052d7b9b8_11->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2904;
@@ -7087,30 +6870,10 @@ D3D11_RENDER_TARGET_VIEW_DESC ltmp2941;
 /*5508*/ /*ID3D11RenderTargetView1*/p0x28052d6de78->GetDesc(/*pDesc: D3D11_RENDER_TARGET_VIEW_DESC * = */ &ltmp2941);
 static const FLOAT atmp2942[] = {0.0, 0.0, 0.0, 0.0};
 /*5509*/ /*ID3D11DeviceContext4*/ctx->OMSetBlendState(/*pBlendState: ID3D11BlendState * = */ p0x28052d75460, /*BlendFactor = */ atmp2942, /*SampleMask = */ UINT(4294967295));
-// redeclare: p0x28052d7b9b8: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_2: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_3: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_4: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_5: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_6: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_7: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_8: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_9: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_10: ID3D11Resource * was ID3D11Texture2D *, dead
 /*5510*/ /*ID3D11ShaderResourceView1*/p0x28052d91480->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b9b8_12);
 /*5511*/ /*ID3D11Texture2D1*/p0x28052d7b9b8_11->Release();// = 1
 ID3D11ShaderResourceView * const ptmp2943 = p0x28052d91480;
 /*5512*/ /*ID3D11DeviceContext4*/ctx->PSSetShaderResources(/*StartSlot: UINT = */ 0, /*NumViews: UINT = */ 1, /*ppShaderResourceViews = */ &ptmp2943);
-// redeclare: p0x28052d7b9b8: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_2: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_3: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_4: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_5: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_6: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_7: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_8: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_9: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d7b9b8_10: ID3D11Resource * was ID3D11Texture2D *, dead
 /*5513*/ /*ID3D11ShaderResourceView1*/p0x28052d91480->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d7b9b8_12);
 /*5514*/ /*ID3D11Texture2D1*/p0x28052d7b9b8_11->Release();// = 1
 D3D11_SHADER_RESOURCE_VIEW_DESC ltmp2944;
@@ -7230,7 +6993,6 @@ D3D11_TEXTURE2D_DESC ltmp2985;
 // kill declaration  p0x28052d931f8
 p0x28052d931f8 = 0;
 const D3D11_TEXTURE2D_DESC tmp2986 = {/*Width = */ 1024, /*Height = */ 512, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(28), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 168, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0};
-// redeclare: p0x28052d95678: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x28052d95678_2;
 /*5583*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp2986, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d95678_2);// = 0
 GUID dtmp2987 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
@@ -7485,7 +7247,6 @@ static const unsigned char btmp3115[] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
 /*5812*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d187b8, /*Subresource: UINT = */ 0);
 ID3D11RenderTargetView * const ptmp3116 = p0x28052d6cff8;
 /*5813*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp3116, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*5814*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*5815*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_RENDER_TARGET_VIEW_DESC ltmp3117;
@@ -7519,7 +7280,6 @@ static const unsigned char btmp3127[] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
 /*5833*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d187b8, /*Subresource: UINT = */ 0);
 ID3D11RenderTargetView * const ptmp3128 = p0x28052d6cff8;
 /*5834*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp3128, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*5835*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*5836*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_RENDER_TARGET_VIEW_DESC ltmp3129;
@@ -7595,7 +7355,6 @@ static const unsigned char btmp3151[] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
 /*5880*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d187b8, /*Subresource: UINT = */ 0);
 ID3D11RenderTargetView * const ptmp3152 = p0x28052d6cff8;
 /*5881*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp3152, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*5882*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*5883*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_RENDER_TARGET_VIEW_DESC ltmp3153;
@@ -7660,7 +7419,6 @@ static const unsigned char btmp3172[] = {0x0, 0x0, 0x90, 0x42, 0x0, 0x0, 0x50, 0
 /*5921*/ /*ID3D11DeviceContext4*/ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d187b8, /*Subresource: UINT = */ 0);
 ID3D11RenderTargetView * const ptmp3173 = p0x28052d6cff8;
 /*5922*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp3173, /*pDepthStencilView: ID3D11DepthStencilView * = */ 0);
-// redeclare: p0x28052d6b3b8: ID3D11Resource * was ID3D11Texture2D *, dead
 /*5923*/ /*ID3D11RenderTargetView1*/p0x28052d6cff8->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d6b3b8_3);
 /*5924*/ /*ID3D11Texture2D1*/p0x28052d6b3b8_2->Release();// = 1
 D3D11_RENDER_TARGET_VIEW_DESC ltmp3174;
@@ -7958,7 +7716,6 @@ static const UINT atmp3340[] = {0, 24400, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 
 
 const D3D11_TEXTURE2D_DESC tmp3341 = {/*Width = */ 512, /*Height = */ 512, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(44), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 72, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0};
-// redeclare: p0x28052d931f8: ID3D11Texture2D * was ID3D11Texture2D *, dead
 ID3D11Texture2D * p0x28052d931f8_2;
 /*6282*/ /*ID3D11Device5*/p0x28050147be8->CreateTexture2D(/*pDesc = */ &tmp3341, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d931f8_2);// = 0
 GUID dtmp3342 = {/*Data1 = */ 1117490210, /*Data2 = */ 37256, /*Data3 = */ 19212, /*Data4 = */ {135, 66, 172, 176, 191, 133, 194, 0}};
