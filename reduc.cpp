@@ -14284,12 +14284,6 @@ ID3D11Buffer * const tmp3365 = 0;
 const UINT tmp3366 = 0;
 const UINT tmp3367 = 0;
 /*6319*/ /*ID3D11DeviceContext4*/p0x28050149ab0_3->IASetVertexBuffers(/*StartSlot: UINT = */ 0, /*NumBuffers: UINT = */ 1, /*ppVertexBuffers = */ &tmp3365, /*pStrides = */ &tmp3366, /*pOffsets = */ &tmp3367);
-// p0x28052d9b438 ID3D11DepthStencilView ID3D11View
-// redeclare: p0x28052d931f8: ID3D11Resource * was ID3D11Texture2D *, dead
-// redeclare: p0x28052d931f8_2: ID3D11Resource * was ID3D11Texture2D *, alive
-ID3D11Resource * p0x28052d931f8_3;
-/*6320*/ /*ID3D11DepthStencilView*/p0x28052d9b438->GetResource(/*ppResource: ID3D11Resource * * = */ &p0x28052d931f8_3);
-// p0x28052d931f8 ID3D11Texture2D IUnknown
 /*6321*/ /*ID3D11Texture2D1*/p0x28052d931f8_2->Release();// = 1
 // p0x28050149ab0 ID3D11DeviceContext ID3D11DeviceContext
 /*6322*/ /*ID3D11DeviceContext4*/p0x28050149ab0_3->OMSetRenderTargets(/*NumViews: UINT = */ 0, /*ppRenderTargetViews: ID3D11RenderTargetView * const * = */ 0, /*pDepthStencilView: ID3D11DepthStencilView * = */ p0x28052d9b438);
