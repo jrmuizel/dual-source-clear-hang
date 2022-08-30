@@ -8,21 +8,14 @@ void main() {
 printf("start replay\n");
 IDXGIFactory1 * p0x2805013f6f0;
 /*0*/ CreateDXGIFactory1(__uuidof(IDXGIFactory1), /*ppFactory: void * * = */(void**) &p0x2805013f6f0);// = 0
-IDXGIAdapter1 * p0x28050141ff0;
-/*1*/ /*IDXGIFactory7*/p0x2805013f6f0->EnumAdapters1(/*Adapter: UINT = */ 0, /*ppAdapter: IDXGIAdapter1 * * = */ &p0x28050141ff0);// = 0
-/*2*/ /*IDXGIFactory7*/p0x2805013f6f0->Release();// = 1
-/*3*/ /*IDXGIAdapter4*/p0x28050141ff0->AddRef();// = 2
-// QI redeclare: as IDXGIAdapter2. Was IDXGIAdapter1 *
-IDXGIAdapter2* p0x28050141ff0_2;
-/*4*/ /*IDXGIAdapter4*/p0x28050141ff0->QueryInterface(/* IDXGIAdapter2 */ &p0x28050141ff0_2);// = 0
-/*5*/ /*IDXGIAdapter4*/p0x28050141ff0->Release();// = 2
-DXGI_ADAPTER_DESC ltmp0;
-/*6*/ /*IDXGIAdapter4*/p0x28050141ff0->GetDesc(/*pDesc: DXGI_ADAPTER_DESC * = */ &ltmp0);// = 0
+IDXGIAdapter1 * adapter;
+/*1*/ /*IDXGIFactory7*/p0x2805013f6f0->EnumAdapters1(/*Adapter: UINT = */ 0, /*ppAdapter: IDXGIAdapter1 * * = */ &adapter);// = 0
+
 static const D3D_FEATURE_LEVEL atmp1[] = {D3D_FEATURE_LEVEL(45312), D3D_FEATURE_LEVEL(45056), D3D_FEATURE_LEVEL(41216), D3D_FEATURE_LEVEL(40960)};
 ID3D11Device * device;
 D3D_FEATURE_LEVEL ltmp2;
 ID3D11DeviceContext * ltmp3;
-/*7*/ D3D11CreateDevice(/*pAdapter: IDXGIAdapter * = */ p0x28050141ff0, /*DriverType = */ D3D_DRIVER_TYPE(0), /*Software: HMODULE = */ 0, /*Flags: UINT = */ 2088, /*pFeatureLevels = */ atmp1, /*FeatureLevels: UINT = */ 4, /*SDKVersion: UINT = */ 7, /*ppDevice: ID3D11Device * * = */ &device, /*pFeatureLevel: D3D_FEATURE_LEVEL * = */ &ltmp2, /*ppImmediateContext: ID3D11DeviceContext * * = */ &ltmp3);// = 0
+/*7*/ D3D11CreateDevice(/*pAdapter: IDXGIAdapter * = */ adapter, /*DriverType = */ D3D_DRIVER_TYPE(0), /*Software: HMODULE = */ 0, /*Flags: UINT = */ 2088, /*pFeatureLevels = */ atmp1, /*FeatureLevels: UINT = */ 4, /*SDKVersion: UINT = */ 7, /*ppDevice: ID3D11Device * * = */ &device, /*pFeatureLevel: D3D_FEATURE_LEVEL * = */ &ltmp2, /*ppImmediateContext: ID3D11DeviceContext * * = */ &ltmp3);// = 0
 
 
 
