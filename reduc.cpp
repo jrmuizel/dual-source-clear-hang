@@ -136,35 +136,6 @@ p0x28050149ab0_2 = 0;
 /*67*/ /*ID3D11Device5*/device->GetFeatureLevel();// = 45056
 IDXGIDevice* p0x280501473f8;
 /*68*/ /*ID3D11Device5*/device->QueryInterface(/* IDXGIDevice */ &p0x280501473f8);// = 0
-IDXGIAdapter * p0x28050141ff0_3;
-/*69*/ /*IDXGIDevice4*/p0x280501473f8->GetAdapter(/*pAdapter: IDXGIAdapter * * = */ &p0x28050141ff0_3);// = 0
-DXGI_ADAPTER_DESC ltmp16;
-/*70*/ /*IDXGIAdapter4*/p0x28050141ff0->GetDesc(/*pDesc: DXGI_ADAPTER_DESC * = */ &ltmp16);// = 0
-/*71*/ /*IDXGIAdapter4*/p0x28050141ff0->Release();// = 3
-/*72*/ /*IDXGIDevice4*/p0x280501473f8->Release();// = 1
-UINT ltmp17;
-/*73*/ /*ID3D11Device5*/device->CheckFormatSupport(/*Format = */ DXGI_FORMAT(103), /*pFormatSupport: UINT * = */ &ltmp17);// = 0
-IDXGIFactory * p0x2805015d8b0;
-/*74*/ CreateDXGIFactory(__uuidof(IDXGIFactory), /*ppFactory: void * * = */(void**) &p0x2805015d8b0);// = 0
-IDXGIAdapter * p0x28050160ab0;
-/*75*/ /*IDXGIFactory7*/p0x2805015d8b0->EnumAdapters(/*Adapter: UINT = */ 0, /*ppAdapter: IDXGIAdapter * * = */ &p0x28050160ab0);// = 0
-DXGI_ADAPTER_DESC ltmp18;
-/*76*/ /*IDXGIAdapter4*/p0x28050160ab0->GetDesc(/*pDesc: DXGI_ADAPTER_DESC * = */ &ltmp18);// = 0
-/*77*/ /*IDXGIAdapter4*/p0x28050160ab0->Release();// = 0
-// kill declaration  p0x28050160ab0
-p0x28050160ab0 = 0;
-/*78*/ /*IDXGIFactory7*/p0x2805015d8b0->Release();// = 0
-// kill declaration  p0x2805015d8b0
-p0x2805015d8b0 = 0;
-UINT ltmp19;
-/*79*/ /*ID3D11Device5*/device->CheckFormatSupport(/*Format = */ DXGI_FORMAT(104), /*pFormatSupport: UINT * = */ &ltmp19);// = -2147467259
-UINT ltmp20;
-/*80*/ /*ID3D11Device5*/device->CheckFormatSupport(/*Format = */ DXGI_FORMAT(105), /*pFormatSupport: UINT * = */ &ltmp20);// = -2147467259
-/*81*/ /*ID3D11Device5*/device->AddRef();// = 2
-/*82*/ /*ID3D11Device5*/device->SetExceptionMode(/*RaiseFlags: UINT = */ 0);// = 0
-/*83*/ /*ID3D11Device5*/device->Release();// = 1
-/*84*/ /*IDXGIAdapter4*/p0x28050141ff0->Release();// = 2
-/*85*/ /*IDXGIAdapter4*/p0x28050141ff0->AddRef();// = 3
 
 
 
