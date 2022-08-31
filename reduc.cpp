@@ -191,6 +191,8 @@ static ID3D11Buffer * const vertex_buffers[] = {p0x28052d6a2f8, p0x28052d187b8, 
 static const UINT strides[] = {2, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 static const UINT offsets[] = {0, 24400, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 /*6280*/ /*ID3D11DeviceContext4*/ctx->IASetVertexBuffers(/*StartSlot: UINT = */ 0, /*NumBuffers: UINT = */ 16, /*ppVertexBuffers = */ vertex_buffers, /*pStrides = */ strides, /*pOffsets = */ offsets);
+const D3D11_VIEWPORT viewport = {/*TopLeftX = */ 0.0, /*TopLeftY = */ 0.0, /*Width = */ 512.0, /*Height = */ 512.0, /*MinDepth = */ 0.0, /*MaxDepth = */ 1.0 };
+/*6304*/ /*ID3D11DeviceContext4*/ctx->RSSetViewports(/*NumViewports: UINT = */ 1, /*pViewports = */ &viewport);
 ///*6281*/ /*ID3D11DeviceContext4*/ctx->DrawIndexedInstanced(/*IndexCountPerInstance: UINT = */ 6, /*InstanceCount: UINT = */ 1, /*StartIndexLocation: UINT = */ 0, /*BaseVertexLocation: INT = */ 0, /*StartInstanceLocation: UINT = */ 0);
 /*6324*/ /*ID3D11DeviceContext4*/ctx->Draw(/*VertexCount: UINT = */3, /*StartVertexLocation: UINT = */ 0);
 
@@ -319,9 +321,7 @@ ID3D11Buffer * const ptmp3364 = p0x28052d93ff8;
 /*6316*/ /*ID3D11DeviceContext4*/ctx->PSSetConstantBuffers(/*StartSlot: UINT = */ 0, /*NumBuffers: UINT = */ 1, /*ppConstantBuffers = */ &ptmp3364);
 /*6317*/ /*ID3D11DeviceContext4*/ctx->IASetIndexBuffer(/*pIndexBuffer: ID3D11Buffer * = */ 0, /*Format = */ DXGI_FORMAT(0), /*Offset: UINT = */ 0);
 /*6318*/ /*ID3D11DeviceContext4*/ctx->IASetInputLayout(/*pInputLayout: ID3D11InputLayout * = */ 0);
-ID3D11Buffer * const tmp3365 = 0;
-const UINT tmp3366 = 0;
-const UINT tmp3367 = 0;
+
 /*6321*/ /*ID3D11Texture2D1*/p0x28052d931f8_2->Release();// = 1
 /*6322*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 0, /*ppRenderTargetViews: ID3D11RenderTargetView * const * = */ 0, /*pDepthStencilView: ID3D11DepthStencilView * = */ p0x28052d9b438);
 const D3D11_RECT tmp3368 = {/*left = */ 0, /*top = */ 0, /*right = */ 256, /*bottom = */ 512};
