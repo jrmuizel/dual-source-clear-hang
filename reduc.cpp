@@ -436,16 +436,10 @@ Texture2D<float4> StereoParams : register(t125);
 void main(
   float4 v0 : TEXCOORD0,
   int4 v1 : TEXCOORD1,
-  out float4 o0 : SV_Position0,
-  out float4 o1 : TEXCOORD6,
-  out float4 o2 : TEXCOORD7,
-  out float4 o3 : TEXCOORD0,
-  out float4 o4 : TEXCOORD1,
-  out float4 o5 : TEXCOORD2,
-  out float4 o6 : TEXCOORD3,
-  out float2 o7 : TEXCOORD4,
-  out float2 p7 : TEXCOORD5)
+  out float4 o0 : SV_Position0)
 {
+  float4 o1, o2, o3, o4, o5, o6;
+  float2 o7, p7;
   float4 r0,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14;
   uint4 bitmask, uiDest;
   float4 fDest;
@@ -651,14 +645,6 @@ Texture2D<float4> StereoParams : register(t125);
 
 void main( 
   float4 v0 : SV_Position0,
-  float4 v1 : TEXCOORD6,
-  float4 v2 : TEXCOORD7,
-  nointerpolation float4 v3 : TEXCOORD0,
-  nointerpolation float4 v4 : TEXCOORD1,
-  nointerpolation float4 v5 : TEXCOORD2,
-  nointerpolation float4 v6 : TEXCOORD3,
-  float2 v7 : TEXCOORD4,
-  float2 w7 : TEXCOORD5,
   out float4 o0 : SV_TARGET0,
   out float4 o1 : SV_TARGET1)
 {
