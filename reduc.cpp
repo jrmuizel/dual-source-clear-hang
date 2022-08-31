@@ -82,10 +82,7 @@ const D3D11_SHADER_RESOURCE_VIEW_DESC tmp3032 = {/*Format = */ DXGI_FORMAT(28), 
 ID3D11SamplerState* const ptmp3038 = p0x28052d76320x;
 /*5663*/ /*ID3D11DeviceContext4*/ctx->PSSetSamplers(/*StartSlot: UINT = */ 0, /*NumSamplers: UINT = */ 1, /*ppSamplers = */ &ptmp3038);
 
-static ID3D11Buffer* const atmp3048[] = { p0x28052d6a2f8, p0x28052d187b8, p0x28052d187b8, p0x28052d187b8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-static const UINT atmp3049[] = { 2, 2, 2, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-static const UINT atmp3050[] = { 0, 22928, 22944, 22960, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-/*5680*/ /*ID3D11DeviceContext4*/ctx->IASetVertexBuffers(/*StartSlot: UINT = */ 0, /*NumBuffers: UINT = */ 16, /*ppVertexBuffers = */ atmp3048, /*pStrides = */ atmp3049, /*pOffsets = */ atmp3050);
+
 /*5681*/ /*ID3D11DeviceContext4*/ctx->IASetPrimitiveTopology(/*Topology = */ D3D11_PRIMITIVE_TOPOLOGY(4));
 
 const D3D11_TEXTURE2D_DESC tmp2986 = {/*Width = */ 1024, /*Height = */ 512, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(28), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 168, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0 };
@@ -325,7 +322,6 @@ ID3D11Buffer * const ptmp3364 = p0x28052d93ff8;
 ID3D11Buffer * const tmp3365 = 0;
 const UINT tmp3366 = 0;
 const UINT tmp3367 = 0;
-/*6319*/ /*ID3D11DeviceContext4*/ctx->IASetVertexBuffers(/*StartSlot: UINT = */ 0, /*NumBuffers: UINT = */ 1, /*ppVertexBuffers = */ &tmp3365, /*pStrides = */ &tmp3366, /*pOffsets = */ &tmp3367);
 /*6321*/ /*ID3D11Texture2D1*/p0x28052d931f8_2->Release();// = 1
 /*6322*/ /*ID3D11DeviceContext4*/ctx->OMSetRenderTargets(/*NumViews: UINT = */ 0, /*ppRenderTargetViews: ID3D11RenderTargetView * const * = */ 0, /*pDepthStencilView: ID3D11DepthStencilView * = */ p0x28052d9b438);
 const D3D11_RECT tmp3368 = {/*left = */ 0, /*top = */ 0, /*right = */ 256, /*bottom = */ 512};
