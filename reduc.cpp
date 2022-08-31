@@ -188,7 +188,7 @@ static const unsigned char btmp1141[] = { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0
 ID3D11Buffer * const ptmp3337 = p0x28052d7ae78;
 /*6279*/ ctx->VSSetConstantBuffers(/*StartSlot: UINT = */ 0, /*NumBuffers: UINT = */ 1, /*ppConstantBuffers = */ &ptmp3337);
 const D3D11_VIEWPORT viewport = {/*TopLeftX = */ 0.0, /*TopLeftY = */ 0.0, /*Width = */ 512.0, /*Height = */ 512.0, /*MinDepth = */ 0.0, /*MaxDepth = */ 1.0 };
-/*6304*/ ctx->RSSetViewports(/*NumViewports: UINT = */ 1, /*pViewports = */ &viewporttmp3359);
+/*6304*/ ctx->RSSetViewports(/*NumViewports: UINT = */ 1, /*pViewports = */ &viewport);
 static ID3D11Buffer * const vertex_buffers[] = {p0x28052d6a2f8, p0x28052d187b8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 static const UINT strides[] = {2, 16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 static const UINT offsets[] = {0, 24400, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -293,7 +293,7 @@ void main(
   float4 v0 : SV_POSITION0,
   out float oDepth : SV_DEPTH)
 {
-  oDepth = zValue_Depth;
+  oDepth = 0;
   return;
 }
 )";
