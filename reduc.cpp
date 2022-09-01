@@ -220,11 +220,12 @@ ID3D11DepthStencilState* p0x28052d75c60;
 /*6297*/ device->CreateDepthStencilState(/*pDepthStencilDesc = */ &tmp3352, /*ppDepthStencilState: ID3D11DepthStencilState * * = */ &p0x28052d75c60);// = 0
 
 const D3D11_BUFFER_DESC tmp3353 = {/*ByteWidth = */ 32, /*Usage = */ D3D11_USAGE(2), /*BindFlags = */ 4, /*CPUAccessFlags = */ 65536, /*MiscFlags = */ 0, /*StructureByteStride = */ 0};
-static const unsigned char ibtmp3355[] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0x3f, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0};
+// float r, g, b, a, z, c1padding[3]
+static const unsigned char ibtmp3355[] = {0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0,  0x0, 0x0, 0x80, 0x3f,   0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0};
 const D3D11_SUBRESOURCE_DATA tmp3354 = {/*pSysMem = */ ibtmp3355, /*SysMemPitch = */ 32, /*SysMemSlicePitch = */ 32};
-ID3D11Buffer * p0x28052d93ff8;
-/*6298*/ device->CreateBuffer(/*pDesc = */ &tmp3353, /*pInitialData = */ &tmp3354, /*ppBuffer: ID3D11Buffer * * = */ &p0x28052d93ff8);// = 0
-/*6300*/ /*ID3D11Buffer*/p0x28052d93ff8->SetPrivateData(/*guid = */ WKPDID_D3DDebugObjectName, /*DataSize: UINT = */ 29, /*pData: const void * = */ "ANGLE_Clear11 Constant Buffer");// = 0
+ID3D11Buffer * clear_constant_buffer;
+/*6298*/ device->CreateBuffer(/*pDesc = */ &tmp3353, /*pInitialData = */ &tmp3354, /*ppBuffer: ID3D11Buffer * * = */ &clear_constant_buffer);// = 0
+/*6300*/ /*ID3D11Buffer*/clear_constant_buffer->SetPrivateData(/*guid = */ WKPDID_D3DDebugObjectName, /*DataSize: UINT = */ 29, /*pData: const void * = */ "ANGLE_Clear11 Constant Buffer");// = 0
 
 const D3D11_VIEWPORT tmp3359 = {/*TopLeftX = */ 0.0, /*TopLeftY = */ 0.0, /*Width = */ 512.0, /*Height = */ 512.0, /*MinDepth = */ 0.0, /*MaxDepth = */ 1.0};
 /*6304*/ ctx->RSSetViewports(/*NumViewports: UINT = */ 1, /*pViewports = */ &tmp3359);
@@ -309,7 +310,7 @@ if (errors) {
 /*6311*/ device->CreatePixelShader(/*pShaderBytecode = */  psBlob->GetBufferPointer(), psBlob->GetBufferSize(), /*pClassLinkage: ID3D11ClassLinkage * = */ 0, /*ppPixelShader: ID3D11PixelShader * * = */ &clear_ps);// = 0
 /*6313*/ /*ID3D11PixelShader*/clear_ps->SetPrivateData(WKPDID_D3DDebugObjectName, /*DataSize: UINT = */ 22, /*pData: const void * = */ "ANGLE_Clear11 PS Depth");// = 0
 /*6315*/ ctx->PSSetShader(/*pPixelShader: ID3D11PixelShader * = */ clear_ps, /*ppClassInstances: ID3D11ClassInstance * const * = */ 0, /*NumClassInstances: UINT = */ 0);
-ID3D11Buffer * const ptmp3364 = p0x28052d93ff8;
+ID3D11Buffer * const ptmp3364 = clear_constant_buffer;
 /*6316*/ ctx->PSSetConstantBuffers(/*StartSlot: UINT = */ 0, /*NumBuffers: UINT = */ 1, /*ppConstantBuffers = */ &ptmp3364);
 /*6317*/ ctx->IASetIndexBuffer(/*pIndexBuffer: ID3D11Buffer * = */ 0, /*Format = */ DXGI_FORMAT(0), /*Offset: UINT = */ 0);
 /*6318*/ ctx->IASetInputLayout(/*pInputLayout: ID3D11InputLayout * = */ 0);
