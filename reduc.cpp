@@ -10,9 +10,9 @@
 void main() {
 printf("start replay\n");
 IDXGIFactory1 * factory;
-/*0*/ CreateDXGIFactory1(__uuidof(IDXGIFactory1), /*ppFactory: void * * = */(void**) &factory);// = 0
+/*0*/ CreateDXGIFactory1(__uuidof(IDXGIFactory1), (void**) &factory);// = 0
 IDXGIAdapter1 * adapter;
-/*1*/ /*IDXGIFactory7*/factory->EnumAdapters1(/*Adapter: UINT = */ 0, /*ppAdapter: IDXGIAdapter1 * * = */ &adapter);// = 0
+/*1*/ factory->EnumAdapters1(/*Adapter: UINT = */ 0, /*ppAdapter: IDXGIAdapter1 * * = */ &adapter);// = 0
 
 static const D3D_FEATURE_LEVEL atmp1[] = {D3D_FEATURE_LEVEL(45312), D3D_FEATURE_LEVEL(45056), D3D_FEATURE_LEVEL(41216), D3D_FEATURE_LEVEL(40960)};
 ID3D11Device * device;
@@ -22,10 +22,8 @@ ID3D11DeviceContext * ltmp3;
 
 // Initial draw
 
-IDXGIDevice* dxgi_device;
-/*68*/ device->QueryInterface(/* IDXGIDevice */ &dxgi_device);// = 0
 ID3D11Device1* device_2;
-/*263*/ /*IDXGIDevice4*/dxgi_device->QueryInterface(/* ID3D11Device1 */ &device_2);// = 0
+/*263*/ /*IDXGIDevice4*/device->QueryInterface(/* ID3D11Device1 */ &device_2);// = 0
 ID3D11DeviceContext1* ctx;
 /*272*/ device_2->GetImmediateContext1(/*ppImmediateContext: ID3D11DeviceContext1 * * = */ &ctx);
 
@@ -83,17 +81,17 @@ ID3D11SamplerState* const ptmp3038 = p0x28052d76320x;
 /*5663*/ ctx->PSSetSamplers(/*StartSlot: UINT = */ 0, /*NumSamplers: UINT = */ 1, /*ppSamplers = */ &ptmp3038);
 
 
-/*5681*/ ctx->IASetPrimitiveTopology(/*Topology = */ D3D11_PRIMITIVE_TOPOLOGY(4));
+/*5681*/ ctx->IASetPrimitiveTopology(/*Topology = */ D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
 const D3D11_TEXTURE2D_DESC tmp2986 = {/*Width = */ 1024, /*Height = */ 512, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(28), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 168, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0 };
-ID3D11Texture2D* rt_p0x28052d95678_2;
-/*5583*/ device->CreateTexture2D(/*pDesc = */ &tmp2986, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &rt_p0x28052d95678_2);// = 0
-/*5585*/ /*ID3D11Texture2D1*/rt_p0x28052d95678_2->SetPrivateData(/*guid = */ WKPDID_D3DDebugObjectName, /*DataSize: UINT = */ 26, /*pData: const void * = */ "ANGLE_TexStorage2D.Texture");// = 0
+ID3D11Texture2D* rt_dual_source_dest;
+/*5583*/ device->CreateTexture2D(/*pDesc = */ &tmp2986, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &rt_dual_source_dest);// = 0
+/*5585*/ /*ID3D11Texture2D1*/rt_dual_source_dest->SetPrivateData(/*guid = */ WKPDID_D3DDebugObjectName, /*DataSize: UINT = */ 26, /*pData: const void * = */ "ANGLE_TexStorage2D.Texture");// = 0
 
 ID3D11RenderTargetView* p0x28052d6e438;
 const D3D11_RENDER_TARGET_VIEW_DESC tmp2990x = {/*Format = */ DXGI_FORMAT(28), /*ViewDimension = */ D3D11_RTV_DIMENSION(4), /*None = */ {/*Texture2D = */ {/*MipSlice = */ 0}} };
 
-/*5589*/ device->CreateRenderTargetView(/*pResource: ID3D11Resource * = */ rt_p0x28052d95678_2, /*pDesc = */ &tmp2990x, /*ppRTView: ID3D11RenderTargetView * * = */ &p0x28052d6e438);// = 0
+/*5589*/ device->CreateRenderTargetView(/*pResource: ID3D11Resource * = */ rt_dual_source_dest, /*pDesc = */ &tmp2990x, /*ppRTView: ID3D11RenderTargetView * * = */ &p0x28052d6e438);// = 0
 /*5591*/ /*ID3D11RenderTargetView1*/p0x28052d6e438->SetPrivateData(/*guid = */ WKPDID_D3DDebugObjectName, /*DataSize: UINT = */ 22, /*pData: const void * = */ "ANGLE_TexStorage2D.RTV");// = 0
 D3D11_RENDER_TARGET_VIEW_DESC ltmp2992;
 static const FLOAT atmp2996[] = { 1.0, 1.0, 1.0, 1.0 };
@@ -219,12 +217,12 @@ const D3D11_DEPTH_STENCIL_DESC tmp3352 = {/*DepthEnable = */ TRUE, /*DepthWriteM
 ID3D11DepthStencilState* p0x28052d75c60;
 /*6297*/ device->CreateDepthStencilState(/*pDepthStencilDesc = */ &tmp3352, /*ppDepthStencilState: ID3D11DepthStencilState * * = */ &p0x28052d75c60);// = 0
 
-const D3D11_BUFFER_DESC tmp3353 = {/*ByteWidth = */ 32, /*Usage = */ D3D11_USAGE(2), /*BindFlags = */ 4, /*CPUAccessFlags = */ 65536, /*MiscFlags = */ 0, /*StructureByteStride = */ 0};
+const D3D11_BUFFER_DESC clear_constant_buffer_desc = {/*ByteWidth = */ 32, /*Usage = */ D3D11_USAGE(2), /*BindFlags = */ 4, /*CPUAccessFlags = */ 65536, /*MiscFlags = */ 0, /*StructureByteStride = */ 0};
 // float r, g, b, a, z, c1padding[3]
 static const unsigned char ibtmp3355[] = {0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0,  0x0, 0x0, 0x80, 0x3f,   0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0};
 const D3D11_SUBRESOURCE_DATA tmp3354 = {/*pSysMem = */ ibtmp3355, /*SysMemPitch = */ 32, /*SysMemSlicePitch = */ 32};
 ID3D11Buffer * clear_constant_buffer;
-/*6298*/ device->CreateBuffer(/*pDesc = */ &tmp3353, /*pInitialData = */ &tmp3354, /*ppBuffer: ID3D11Buffer * * = */ &clear_constant_buffer);// = 0
+/*6298*/ device->CreateBuffer(/*pDesc = */ &clear_constant_buffer_desc, /*pInitialData = */ &tmp3354, /*ppBuffer: ID3D11Buffer * * = */ &clear_constant_buffer);// = 0
 /*6300*/ /*ID3D11Buffer*/clear_constant_buffer->SetPrivateData(/*guid = */ WKPDID_D3DDebugObjectName, /*DataSize: UINT = */ 29, /*pData: const void * = */ "ANGLE_Clear11 Constant Buffer");// = 0
 
 const D3D11_VIEWPORT tmp3359 = {/*TopLeftX = */ 0.0, /*TopLeftY = */ 0.0, /*Width = */ 512.0, /*Height = */ 512.0, /*MinDepth = */ 0.0, /*MaxDepth = */ 1.0};
