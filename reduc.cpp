@@ -225,12 +225,6 @@ const D3D11_SUBRESOURCE_DATA tmp3354 = {/*pSysMem = */ ibtmp3355, /*SysMemPitch 
 ID3D11Buffer * p0x28052d93ff8;
 /*6298*/ device->CreateBuffer(/*pDesc = */ &tmp3353, /*pInitialData = */ &tmp3354, /*ppBuffer: ID3D11Buffer * * = */ &p0x28052d93ff8);// = 0
 /*6300*/ /*ID3D11Buffer*/p0x28052d93ff8->SetPrivateData(/*guid = */ WKPDID_D3DDebugObjectName, /*DataSize: UINT = */ 29, /*pData: const void * = */ "ANGLE_Clear11 Constant Buffer");// = 0
-D3D11_MAPPED_SUBRESOURCE ltmp3357;
-/*6301*/ ctx->Map(/*pResource: ID3D11Resource * = */ p0x28052d93ff8, /*Subresource: UINT = */ 0, /*MapType = */ D3D11_MAP(4), /*MapFlags: UINT = */ 0, /*pMappedResource: D3D11_MAPPED_SUBRESOURCE * = */ &ltmp3357);// = 0
-void * p0x280509e1000 = ltmp3357.pData; // size: 32
-static const unsigned char btmp3358[] = {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x80, 0x3f, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0};
-/*6302*/ memcpy(/*dest: void * = */ p0x280509e1000, /*src = */ btmp3358, /*n: size_t = */ 32);
-/*6303*/ ctx->Unmap(/*pResource: ID3D11Resource * = */ p0x28052d93ff8, /*Subresource: UINT = */ 0);
 
 const D3D11_VIEWPORT tmp3359 = {/*TopLeftX = */ 0.0, /*TopLeftY = */ 0.0, /*Width = */ 512.0, /*Height = */ 512.0, /*MinDepth = */ 0.0, /*MaxDepth = */ 1.0};
 /*6304*/ ctx->RSSetViewports(/*NumViewports: UINT = */ 1, /*pViewports = */ &tmp3359);
