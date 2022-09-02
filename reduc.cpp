@@ -208,19 +208,19 @@ ID3D11Texture2D * p0x28052d931f8_2;
 const D3D11_DEPTH_STENCIL_VIEW_DESC tmp3345 = {/*Format = */ DXGI_FORMAT_D24_UNORM_S8_UINT, /*ViewDimension = */ D3D11_DSV_DIMENSION(3), /*Flags = */ 0, /*None = */ {/*Texture2D = */ {/*MipSlice = */ 0}}};
 ID3D11DepthStencilView * p0x28052d9b438;
 /*6288*/ device->CreateDepthStencilView(/*pResource: ID3D11Resource * = */ p0x28052d931f8_2, /*pDesc = */ &tmp3345, /*ppDepthStencilView: ID3D11DepthStencilView * * = */ &p0x28052d9b438);// = 0
+/*6321*/ /*ID3D11Texture2D1*/p0x28052d931f8_2->Release();// = 1
 /*6290*/ /*ID3D11DepthStencilView*/p0x28052d9b438->SetPrivateData(/*guid = */ WKPDID_D3DDebugObjectName, /*DataSize: UINT = */ 28, /*pData: const void * = */ "ANGLE_createRenderTarget.DSV");// = 0
-D3D11_DEPTH_STENCIL_VIEW_DESC ltmp3347;
-const D3D11_BLEND_DESC tmp3351 = {/*AlphaToCoverageEnable = */ FALSE, /*IndependentBlendEnable = */ FALSE, /*RenderTarget = */ {
+
+const D3D11_BLEND_DESC no_blend_desc = {/*AlphaToCoverageEnable = */ FALSE, /*IndependentBlendEnable = */ FALSE, /*RenderTarget = */ {
 	{/*BlendEnable = */ FALSE, /*SrcBlend = */ D3D11_BLEND(0), /*DestBlend = */ D3D11_BLEND(0), /*BlendOp = */ D3D11_BLEND_OP(0), /*SrcBlendAlpha = */ D3D11_BLEND(0), /*DestBlendAlpha = */ D3D11_BLEND(0), /*BlendOpAlpha = */ D3D11_BLEND_OP(0), /*RenderTargetWriteMask = */ 0}} };
-
 ID3D11BlendState * p0x28052d769e0;
-/*6296*/ device->CreateBlendState(/*pBlendStateDesc = */ &tmp3351, /*ppBlendState: ID3D11BlendState * * = */ &p0x28052d769e0);// = 0
+/*6296*/ device->CreateBlendState(/*pBlendStateDesc = */ &no_blend_desc, /*ppBlendState: ID3D11BlendState * * = */ &p0x28052d769e0);// = 0
 
-const D3D11_DEPTH_STENCIL_DESC tmp3352 = {/*DepthEnable = */ TRUE, /*DepthWriteMask = */ D3D11_DEPTH_WRITE_MASK(1), /*DepthFunc = */ D3D11_COMPARISON_FUNC(8), /*StencilEnable = */ BOOL(0), /*StencilReadMask = */ 0, /*StencilWriteMask = */ 255, /*FrontFace = */ {/*StencilFailOp = */ D3D11_STENCIL_OP(3), /*StencilDepthFailOp = */ D3D11_STENCIL_OP(3), /*StencilPassOp = */ D3D11_STENCIL_OP(3), /*StencilFunc = */ D3D11_COMPARISON_FUNC(8)}, /*BackFace = */ {/*StencilFailOp = */ D3D11_STENCIL_OP(3), /*StencilDepthFailOp = */ D3D11_STENCIL_OP(3), /*StencilPassOp = */ D3D11_STENCIL_OP(3), /*StencilFunc = */ D3D11_COMPARISON_FUNC(8)}};
+const D3D11_DEPTH_STENCIL_DESC tmp3352 = {/*DepthEnable = */ TRUE, /*DepthWriteMask = */ D3D11_DEPTH_WRITE_MASK_ALL, /*DepthFunc = */ D3D11_COMPARISON_ALWAYS, /*StencilEnable = */ FALSE, /*StencilReadMask = */ 0, /*StencilWriteMask = */ 255, /*FrontFace = */ {/*StencilFailOp = */ D3D11_STENCIL_OP(3), /*StencilDepthFailOp = */ D3D11_STENCIL_OP(3), /*StencilPassOp = */ D3D11_STENCIL_OP(3), /*StencilFunc = */ D3D11_COMPARISON_FUNC(8)}, /*BackFace = */ {/*StencilFailOp = */ D3D11_STENCIL_OP(3), /*StencilDepthFailOp = */ D3D11_STENCIL_OP(3), /*StencilPassOp = */ D3D11_STENCIL_OP(3), /*StencilFunc = */ D3D11_COMPARISON_FUNC(8)}};
 ID3D11DepthStencilState* p0x28052d75c60;
 /*6297*/ device->CreateDepthStencilState(/*pDepthStencilDesc = */ &tmp3352, /*ppDepthStencilState: ID3D11DepthStencilState * * = */ &p0x28052d75c60);// = 0
 
-const D3D11_BUFFER_DESC clear_constant_buffer_desc = {/*ByteWidth = */ 32, /*Usage = */ D3D11_USAGE(2), /*BindFlags = */ 4, /*CPUAccessFlags = */ 65536, /*MiscFlags = */ 0, /*StructureByteStride = */ 0};
+const D3D11_BUFFER_DESC clear_constant_buffer_desc = {/*ByteWidth = */ 32, /*Usage = */D3D11_USAGE_DYNAMIC, /*BindFlags = */ D3D11_BIND_CONSTANT_BUFFER, /*CPUAccessFlags = */ 65536, /*MiscFlags = */ 0, /*StructureByteStride = */ 0};
 // float r, g, b, a, z, c1padding[3]
 static const unsigned char ibtmp3355[] = {0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0,  0x0, 0x0, 0x80, 0x3f,   0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0,   0x0, 0x0, 0x0, 0x0};
 const D3D11_SUBRESOURCE_DATA tmp3354 = {/*pSysMem = */ ibtmp3355, /*SysMemPitch = */ 32, /*SysMemSlicePitch = */ 32};
@@ -320,10 +320,12 @@ ID3D11Buffer * const tmp3365 = 0;
 const UINT tmp3366 = 0;
 const UINT tmp3367 = 0;
 /*6319*/ ctx->IASetVertexBuffers(/*StartSlot: UINT = */ 0, /*NumBuffers: UINT = */ 1, /*ppVertexBuffers = */ &tmp3365, /*pStrides = */ &tmp3366, /*pOffsets = */ &tmp3367);
-/*6321*/ /*ID3D11Texture2D1*/p0x28052d931f8_2->Release();// = 1
+
 /*6322*/ ctx->OMSetRenderTargets(/*NumViews: UINT = */ 0, /*ppRenderTargetViews: ID3D11RenderTargetView * const * = */ 0, /*pDepthStencilView: ID3D11DepthStencilView * = */ p0x28052d9b438);
-const D3D11_RECT tmp3368 = {/*left = */ 0, /*top = */ 0, /*right = */ 256, /*bottom = */ 512};
-///*6323*/ ctx->RSSetScissorRects(/*NumRects: UINT = */ 1, /*pRects = */ &tmp3368);
+
+const D3D11_RECT scissor_rect = {/*left = */ 0, /*top = */ 0, /*right = */ 256, /*bottom = */ 512};
+///*6323*/ ctx->RSSetScissorRects(/*NumRects: UINT = */ 1, /*pRects = */ &scissor_rect);
+
 /*6324*/ ctx->Draw(/*VertexCount: UINT = */ 6, /*StartVertexLocation: UINT = */ 0);
 /*6454*/ ctx->Flush();
 printf("done replay\n");
