@@ -86,20 +86,20 @@ ID3D11SamplerState* const ptmp3038 = p0x28052d76320x;
 
 /*5681*/ ctx->IASetPrimitiveTopology(/*Topology = */ D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
 
-const D3D11_TEXTURE2D_DESC tmp2986 = {/*Width = */ 1024, /*Height = */ 512, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT(28), /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 168, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0 };
+const D3D11_TEXTURE2D_DESC tmp2986 = {/*Width = */ 1024, /*Height = */ 512, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT_R8G8B8A8_UNORM, /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 168, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0 };
 ID3D11Texture2D* rt_dual_source_dest;
 /*5583*/ device->CreateTexture2D(/*pDesc = */ &tmp2986, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &rt_dual_source_dest);// = 0
 /*5585*/ /*ID3D11Texture2D1*/rt_dual_source_dest->SetPrivateData(/*guid = */ WKPDID_D3DDebugObjectName, /*DataSize: UINT = */ 26, /*pData: const void * = */ "ANGLE_TexStorage2D.Texture");// = 0
 
-ID3D11RenderTargetView* p0x28052d6e438;
-const D3D11_RENDER_TARGET_VIEW_DESC tmp2990x = {/*Format = */ DXGI_FORMAT(28), /*ViewDimension = */ D3D11_RTV_DIMENSION(4), /*None = */ {/*Texture2D = */ {/*MipSlice = */ 0}} };
+ID3D11RenderTargetView* render_target_view;
+const D3D11_RENDER_TARGET_VIEW_DESC tmp2990x = {/*Format = */ DXGI_FORMAT_R8G8B8A8_UNORM, /*ViewDimension = */ D3D11_RTV_DIMENSION(4), /*None = */ {/*Texture2D = */ {/*MipSlice = */ 0}} };
 
-/*5589*/ device->CreateRenderTargetView(/*pResource: ID3D11Resource * = */ rt_dual_source_dest, /*pDesc = */ &tmp2990x, /*ppRTView: ID3D11RenderTargetView * * = */ &p0x28052d6e438);// = 0
-/*5591*/ /*ID3D11RenderTargetView1*/p0x28052d6e438->SetPrivateData(/*guid = */ WKPDID_D3DDebugObjectName, /*DataSize: UINT = */ 22, /*pData: const void * = */ "ANGLE_TexStorage2D.RTV");// = 0
+/*5589*/ device->CreateRenderTargetView(/*pResource: ID3D11Resource * = */ rt_dual_source_dest, /*pDesc = */ &tmp2990x, /*ppRTView: ID3D11RenderTargetView * * = */ &render_target_view);// = 0
+/*5591*/ /*ID3D11RenderTargetView1*/render_target_view->SetPrivateData(/*guid = */ WKPDID_D3DDebugObjectName, /*DataSize: UINT = */ 22, /*pData: const void * = */ "ANGLE_TexStorage2D.RTV");// = 0
 D3D11_RENDER_TARGET_VIEW_DESC ltmp2992;
 static const FLOAT atmp2996[] = { 1.0, 1.0, 1.0, 1.0 };
-/*5597*/ ctx->ClearRenderTargetView(/*pRenderTargetView: ID3D11RenderTargetView * = */ p0x28052d6e438, /*ColorRGBA = */ atmp2996);
-ID3D11RenderTargetView * const ptmp3318 = p0x28052d6e438;
+/*5597*/ ctx->ClearRenderTargetView(/*pRenderTargetView: ID3D11RenderTargetView * = */ render_target_view, /*ColorRGBA = */ atmp2996);
+ID3D11RenderTargetView * const ptmp3318 = render_target_view;
 /*6224*/ ctx->OMSetRenderTargets(/*NumViews: UINT = */ 1, /*ppRenderTargetViews = */ &ptmp3318, /*pDepthStencilView: ID3D11DepthStencilView * = */ depth_view);
 const D3D11_BLEND_DESC tmp1118x = {/*AlphaToCoverageEnable = */ TRUE, /*IndependentBlendEnable = */ FALSE, /*RenderTarget = */ {
 	{/*BlendEnable = */ TRUE, /*SrcBlend = */ D3D11_BLEND_ONE, /*DestBlend = */ D3D11_BLEND_INV_SRC1_COLOR, /*BlendOp = */ D3D11_BLEND_OP_ADD, /*SrcBlendAlpha = */ D3D11_BLEND_ONE, /*DestBlendAlpha = */ D3D11_BLEND_INV_SRC1_ALPHA, /*BlendOpAlpha = */D3D11_BLEND_OP_ADD, /*RenderTargetWriteMask = */ 15},
@@ -200,7 +200,7 @@ static const UINT offsets[] = {0, 24400, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 ctx->Flush();
 
 // Stencil clear draw
-
+#if 0
 const D3D11_TEXTURE2D_DESC tmp3341 = {/*Width = */ 512, /*Height = */ 512, /*MipLevels = */ 1, /*ArraySize = */ 1, /*Format = */ DXGI_FORMAT_R24G8_TYPELESS, /*SampleDesc = */ {/*Count = */ 1, /*Quality = */ UINT(0)}, /*Usage = */ D3D11_USAGE(0), /*BindFlags = */ 72, /*CPUAccessFlags = */ 0, /*MiscFlags = */ 0};
 ID3D11Texture2D * p0x28052d931f8_2;
 /*6282*/ device->CreateTexture2D(/*pDesc = */ &tmp3341, /*pInitialData: const D3D11_SUBRESOURCE_DATA * = */ 0, /*ppTexture2D: ID3D11Texture2D * * = */ &p0x28052d931f8_2);// = 0
@@ -210,6 +210,7 @@ ID3D11DepthStencilView * p0x28052d9b438;
 /*6288*/ device->CreateDepthStencilView(/*pResource: ID3D11Resource * = */ p0x28052d931f8_2, /*pDesc = */ &tmp3345, /*ppDepthStencilView: ID3D11DepthStencilView * * = */ &p0x28052d9b438);// = 0
 /*6321*/ /*ID3D11Texture2D1*/p0x28052d931f8_2->Release();// = 1
 /*6290*/ /*ID3D11DepthStencilView*/p0x28052d9b438->SetPrivateData(/*guid = */ WKPDID_D3DDebugObjectName, /*DataSize: UINT = */ 28, /*pData: const void * = */ "ANGLE_createRenderTarget.DSV");// = 0
+#endif
 
 const D3D11_BLEND_DESC no_blend_desc = {/*AlphaToCoverageEnable = */ FALSE, /*IndependentBlendEnable = */ FALSE, /*RenderTarget = */ {
 	{/*BlendEnable = */ FALSE, /*SrcBlend = */ D3D11_BLEND(0), /*DestBlend = */ D3D11_BLEND(0), /*BlendOp = */ D3D11_BLEND_OP(0), /*SrcBlendAlpha = */ D3D11_BLEND(0), /*DestBlendAlpha = */ D3D11_BLEND(0), /*BlendOpAlpha = */ D3D11_BLEND_OP(0), /*RenderTargetWriteMask = */ 0}} };
@@ -278,7 +279,7 @@ if (errors) {
 /*6314*/ ctx->VSSetShader(/*pVertexShader: ID3D11VertexShader * = */ clear_vs, /*ppClassInstances: ID3D11ClassInstance * const * = */ 0, /*NumClassInstances: UINT = */ 0);
 
 
-static const unsigned char clear_ps_source[] = R"(
+static const unsigned char clear_depth_ps_source[] = R"(
 cbuffer DepthOnlyData : register(b0)
 {
   float zValue_Depth : packoffset(c1);
@@ -293,13 +294,35 @@ void main(
 }
 )";
 
+static const unsigned char clear_depth_and_color_ps_source[] = R"(
+cbuffer DepthOnlyData : register(b0)
+{
+  float zValue_Depth : packoffset(c1);
+}
+
+void main( 
+  float4 v0 : SV_POSITION0,
+  out float oDepth : SV_DEPTH,
+  out float o0: SV_TARGET0)
+{
+  oDepth = 0;
+  o0 = 0;
+  return;
+}
+)";
+
+
 ID3D11PixelShader* clear_ps;
 ID3DBlob* psBlob;
 //ID3DBlob* errors;
 
-//D3DCompileFromFile(L"clear11ps.hlsl", nullptr, nullptr, "main", "ps_4_1",/*D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION*/ D3DCOMPILE_OPTIMIZATION_LEVEL2, 0, &vsBlob, &errors);
-D3DCompile(clear_ps_source, sizeof(clear_ps_source), "clear11ps.hlsl", nullptr, nullptr, "main", "ps_4_1",/*D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION*/ D3DCOMPILE_OPTIMIZATION_LEVEL2, 0, &psBlob, &errors);
-
+// If we clear the color as well that avoids the hang
+bool clear_depth_and_color = false;
+if (clear_depth_and_color) {
+	D3DCompile(clear_depth_and_color_ps_source, sizeof(clear_depth_ps_source), "clear11ps.hlsl", nullptr, nullptr, "main", "ps_4_1",/*D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION*/ D3DCOMPILE_OPTIMIZATION_LEVEL2, 0, &psBlob, &errors);
+} else {
+	D3DCompile(clear_depth_ps_source, sizeof(clear_depth_ps_source), "clear11ps.hlsl", nullptr, nullptr, "main", "ps_4_1",/*D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION*/ D3DCOMPILE_OPTIMIZATION_LEVEL2, 0, &psBlob, &errors);
+}
 if (errors) {
 	OutputDebugStringA("Failed to compile");
 	OutputDebugStringA((char*)errors->GetBufferPointer());
@@ -321,11 +344,12 @@ const UINT tmp3366 = 0;
 const UINT tmp3367 = 0;
 /*6319*/ ctx->IASetVertexBuffers(/*StartSlot: UINT = */ 0, /*NumBuffers: UINT = */ 1, /*ppVertexBuffers = */ &tmp3365, /*pStrides = */ &tmp3366, /*pOffsets = */ &tmp3367);
 
-/*6322*/ ctx->OMSetRenderTargets(/*NumViews: UINT = */ 0, /*ppRenderTargetViews: ID3D11RenderTargetView * const * = */ 0, /*pDepthStencilView: ID3D11DepthStencilView * = */ p0x28052d9b438);
+/*6322*/ //ctx->OMSetRenderTargets(/*NumViews: UINT = */ 0, /*ppRenderTargetViews: ID3D11RenderTargetView * const * = */ 0, /*pDepthStencilView: ID3D11DepthStencilView * = */ depth_view);
 
 const D3D11_RECT scissor_rect = {/*left = */ 0, /*top = */ 0, /*right = */ 256, /*bottom = */ 512};
 ///*6323*/ ctx->RSSetScissorRects(/*NumRects: UINT = */ 1, /*pRects = */ &scissor_rect);
-
+static const FLOAT clear_color[] = { 1.0, 1.0, 1.0, 1.0 };
+//ctx->ClearView(render_target_view, clear_color, &scissor_rect, 1);
 /*6324*/ ctx->Draw(/*VertexCount: UINT = */ 6, /*StartVertexLocation: UINT = */ 0);
 /*6454*/ ctx->Flush();
 printf("done replay\n");
